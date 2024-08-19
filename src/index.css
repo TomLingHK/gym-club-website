@@ -9,10 +9,14 @@
     --size-xl: 1.75rem;
     --size-xxl: 2.5rem;
 
-    --black-color-light: #171717;
-    --black-color: #000000;
-    --white-color: #ffffff;
-    --primary-color: rgb(220 38 38);
+    --color-black-light: #171717;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-primary: rgb(220 38 38);
 
-    background-color: var(--black-color);
+    background-color: var(--color-black);
+}
+
+body {
+    margin: 0;
 }

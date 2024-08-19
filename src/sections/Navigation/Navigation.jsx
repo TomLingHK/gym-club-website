@@ -1,8 +1,19 @@
 import './Navigation.scss';
 
 function Navigation() {
+    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
+
     return (
-        <section className='navigation'>Navigation</section>
+        <div className='navBar'>
+            <div className='logo'>
+                Logo
+            </div>
+            <div className='navContainer'>
+                {navItems.map(item => 
+                    <div className='navItem'>{item}</div> 
+                )}
+            </div>
+        </div>
     )
 }
 
