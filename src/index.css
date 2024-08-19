@@ -9,14 +9,64 @@
     --size-xl: 1.75rem;
     --size-xxl: 2.5rem;
 
-    --color-black-light: #171717;
+    --spacing-s: 3.75rem;
+    --spacing-m: 6.25rem;
+    --spacing-l: 10rem;
+    --spacing-xl: 15rem;
+    --spacing-xxl: 20rem;
+
     --color-black: #000000;
+    --color-black-light: #171717;
+    --color-grey: #7c7c7c;
+    --color-grey-light: #8a8a8a;
     --color-white: #ffffff;
     --color-primary: rgb(220 38 38);
+    
+    --ff: "DM Sans", sans-serif;
+    --h1: bold 3.375rem / 4rem var(--ff);
+    --h2: bold 2.25rem/2.25rem var(--ff);
+    --h3: bold 1.5rem/1.875rem var(--ff);
 
     background-color: var(--color-black);
 }
 
 body {
     margin: 0;
+}
+
+section {
+    margin: var(--spacing-m)  var(--spacing-l);
+}
+
+h1 {
+    font: var(--h1);
+    margin: 4px 0;
+}
+
+h2 {
+    font: var(--h2);
+    margin: 8px 0;
+}
+
+h3 {
+    font: var(--h3);
+    margin: 8px 0;
+}
+
+.btn {
+    padding: var(--size-s) var(--size-m);
+    cursor: pointer;
+    user-select: none;
+    border-radius: var(--size-s);
+    border: 0.2rem solid var(--color-primary);
+    transition-duration: 500ms;
+    background: var(--color-black);
+    color: var(--color-primary);
+    font-size: var(--size-m);
+
+    &:hover {
+        transform: scale(1.05);
+        background: var(--color-primary);
+        color: var(--color-white);
+    }
 }

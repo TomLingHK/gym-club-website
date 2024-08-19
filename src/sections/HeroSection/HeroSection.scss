@@ -1,0 +1,33 @@
+.heroSection {
+    position: relative;
+    height: var(--spacing-xxl);
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--size-xxl) 0;
+
+    .text {
+        position: relative;
+        text-align: left;
+        margin: var(--size-m);
+        margin-right: var(--spacing-l);
+
+        .description {
+            margin-top: var(--size-s);
+            color: var(--color-grey-light);
+        }
+        .exploreBtn {
+            position: absolute;
+            bottom: var(--size-m);
+        }
+    }
+
+    .img {
+        position: relative;
+        height: inherit;
+        width: var(--spacing-xxl);
+        background-color: var(--color-grey);
+        border-radius: var(--size-m);
+    }
+}
