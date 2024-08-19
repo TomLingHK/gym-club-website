@@ -11,7 +11,7 @@ function HeroSection() {
                     Start Now!
                 </h1>
                 <div className='description'>
-                    Start your free trial section from one of our 100+ classes
+                    Try our free trial section from one of our 100+ classes
                 </div>
                 <div className='btn exploreBtn'>
                     Explore
