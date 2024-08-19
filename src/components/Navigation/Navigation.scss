@@ -12,10 +12,13 @@
     line-height: var(--size-xxl);
 
     .logo {
+        padding: 0 var(--size-m);
         height: var(--size-xxl);
         width: var(--size-xxl);
         margin-right: var(--size-xxl);
         color: var(--color-primary);
+        border-radius: var(--size-m);
+        background: var(--color-grey);
     }
     
     .navContainer {
