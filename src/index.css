@@ -21,6 +21,7 @@
     --color-grey-light: #8a8a8a;
     --color-white: #ffffff;
     --color-primary: rgb(220 38 38);
+    --color-primary-dark: rgb(190, 28, 28);
     
     --ff: "DM Sans", sans-serif;
     --h1: bold 3.375rem / 4rem var(--ff);
@@ -35,7 +36,7 @@ body {
 }
 
 section {
-    margin: var(--spacing-m)  var(--spacing-l);
+    margin: var(--spacing-l)  var(--spacing-xl);
 }
 
 h1 {

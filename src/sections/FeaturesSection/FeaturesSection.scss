@@ -2,11 +2,16 @@
     position: relative;
     width: inherit;
 
+    .mainTitle {
+        color: var(--color-primary-dark);
+    }
+
     .featureContainer {
         position: relative;
         height: var(--spacing-xxl);
         width: inherit;
-        margin: var(--spacing-s) 0;
+        margin-top: var(--spacing-s);
+        margin-bottom: var(--spacing-l);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -21,14 +26,25 @@
         
         .text {
             position: relative;
+            width: 50%;
             text-align: left;
-            margin: var(--size-m);
-            margin-right: var(--spacing-l);
+            margin: var(--size-m) 0;
+
+            .description {
+                margin-top: var(--size-m);
+                color: var(--color-grey-light);
+                font-size: 1rem;
+                line-height: 1.75rem;
+            }
 
             .moreBtn {
                 position: absolute;
-                bottom: var(--size-m);
+                bottom: 0;
             }
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
         }
     }
 }
