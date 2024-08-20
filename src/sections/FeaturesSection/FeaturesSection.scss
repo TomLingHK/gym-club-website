@@ -6,55 +6,8 @@
         color: var(--color-primary-dark);
     }
 
-    .featureContainer {
-        position: relative;
-        height: var(--spacing-xxxl);
-        width: inherit;
-        margin-top: var(--spacing-s);
-        margin-bottom: var(--spacing-l);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .img {
-            position: relative;
-            height: inherit;
-            width: var(--spacing-xxl);
-            background-color: var(--color-grey);
-            border-radius: var(--size-m);
-            overflow: hidden;
-            background-position: center;
-            background-size: cover;
-        }
-
-        @for $i from 1 through 3{
-            &.feature#{$i} {
-                .img {
-                    background-image: url('./images/feature#{$i}_img.jpg')
-                }
-            }
-        }
-        
-        .text {
-            position: relative;
-            width: 50%;
-            text-align: left;
-            margin: var(--size-m) 0;
-
-            .description {
-                margin-top: var(--size-m);
-                color: var(--color-grey-light);
-                font-size: 1rem;
-                line-height: 1.75rem;
-            }
-
-            .moreBtn {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-
-        &:nth-child(odd) {
+    .featuresContainer {
+        .featureContainer:nth-child(odd) {
             flex-direction: row-reverse;
         }
     }
