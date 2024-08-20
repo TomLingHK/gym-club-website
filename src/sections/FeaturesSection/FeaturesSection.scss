@@ -1,0 +1,34 @@
+.featuresSection {
+    position: relative;
+    width: inherit;
+
+    .featureContainer {
+        position: relative;
+        height: var(--spacing-xxl);
+        width: inherit;
+        margin: var(--spacing-s) 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .img {
+            position: relative;
+            height: inherit;
+            width: var(--spacing-xxl);
+            background-color: var(--color-grey);
+            border-radius: var(--size-m);
+        }
+        
+        .text {
+            position: relative;
+            text-align: left;
+            margin: var(--size-m);
+            margin-right: var(--spacing-l);
+
+            .moreBtn {
+                position: absolute;
+                bottom: var(--size-m);
+            }
+        }
+    }
+}

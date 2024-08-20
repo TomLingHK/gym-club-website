@@ -10,7 +10,7 @@ function Navigation() {
             </div>
             <div className='navContainer'>
                 {navItems.map(item => 
-                    <div className='navItem'>{item}</div> 
+                    <div className='navItem' key={item}>{item}</div> 
                 )}
             </div>
         </div>
