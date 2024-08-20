@@ -23,6 +23,7 @@
     --color-white: #ffffff;
     --color-primary: rgb(240, 38, 38);
     --color-primary-dark: rgb(190, 28, 28);
+    --color-primary-light: rgb(300, 28, 28);
     
     --ff: "DM Sans", sans-serif;
     --h1: bold 3.375rem / 4rem var(--ff);
@@ -30,6 +31,14 @@
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
     background-color: var(--color-black);
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-checkpoint {
+    scroll-snap-align: start;
 }
 
 body {

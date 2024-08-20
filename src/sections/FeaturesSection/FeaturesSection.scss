@@ -3,7 +3,14 @@
     width: inherit;
 
     .mainTitle {
-        color: var(--color-primary-dark);
+        position: sticky;
+        top: 0;
+        font-style: italic;
+        color: var(--color-white);
+        background: var(--color-black);
+        z-index: 1;
+        height: 6rem;
+        line-height: 6rem;
     }
 
     .featuresContainer {

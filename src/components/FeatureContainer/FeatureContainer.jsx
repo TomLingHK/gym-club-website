@@ -2,7 +2,7 @@ import './FeatureContainer.scss'
 
 function FeatureContainer({ id, title, description }) {
     return (
-        <div className={'featureContainer ' + id}>
+        <div className={'featureContainer scroll-checkpoint ' + id}>
             <div className='img'>
             </div>
             <div className='text'>

@@ -1,5 +1,6 @@
-import FeatureContainer from '../../components/FeatureContainer/FeatureContainer';
 import './FeaturesSection.scss'
+
+import FeatureContainer from '../../components/FeatureContainer/FeatureContainer';
 
 function FeaturesSection() {
     const featureInfo = [

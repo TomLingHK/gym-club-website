@@ -2,7 +2,7 @@ import './HeroSection.scss'
 
 function HeroSection() {
     return (
-        <section className='heroSection'>
+        <section className='heroSection scroll-checkpoint'>
             <div className='text'>
                 <h1 className='title'>
                     Stop Thinking,

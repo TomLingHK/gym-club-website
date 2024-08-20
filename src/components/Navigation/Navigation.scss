@@ -1,7 +1,9 @@
 .navBar {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: var(--size-xxl);
-    width: inherit;
+    width: 100%;
     background: var(--color-black-light);
     text-align: center;
     padding: var(--size-m);

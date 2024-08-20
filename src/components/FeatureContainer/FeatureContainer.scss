@@ -1,19 +1,18 @@
 
 .featureContainer {
     position: relative;
-    height: var(--spacing-xxxl);
+    height: 80vh;
     width: inherit;
-    margin-top: var(--spacing-s);
-    margin-bottom: var(--spacing-l);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 12.5% 0;
 
     .img {
         position: relative;
-        height: inherit;
-        width: var(--spacing-xxl);
-        background-color: var(--color-grey);
+        height: 70%;
+        width: var(--spacing-xxxl);
         border-radius: var(--size-m);
         overflow: hidden;
         background-position: center;
@@ -31,8 +30,13 @@
     .text {
         position: relative;
         width: 50%;
+        height: 50%;
         text-align: left;
         margin: var(--size-m) 0;
+
+        .title {
+            color: var(--color-white);
+        }
 
         .description {
             margin-top: var(--size-m);
