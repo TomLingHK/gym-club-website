@@ -1,0 +1,51 @@
+.planContainer {
+    position: relative;
+    height: 50vh;
+    width: 240px;
+    padding: var(--size-l);
+    background: var(--color-grey-light);
+    border-radius: var(--size-m);
+
+    .price {
+        color: var(--color-black);
+    }
+
+    .title {
+        color: var(--color-black);
+        font-size: var(--size-l);
+        line-height: var(--size-xl);
+        margin: var(--size-s) 0;
+        font-weight: bold;
+    }
+
+    .description {
+        color: var(--color-black-light);
+        line-height: var(--size-l);
+        margin: var(--size-s) 0;
+    }
+
+    .details {
+        .item {
+            margin: var(--size-xs) 0;
+            font-size: var(--size-m);
+            .tickIcon {
+                color: var(--color-primary);
+                display: inline-block;
+            }
+            .text {
+                color: var(--color-black);
+                margin-left: var(--size-xs);
+                display: inline-block;
+            }
+        }
+    }
+
+    .btn {
+        background: var(--color-white-dark);
+    }
+
+    .selectPlanBtn {
+        position: absolute;
+        bottom: var(--size-l);
+    }
+}

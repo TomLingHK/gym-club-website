@@ -19,18 +19,20 @@
     --color-black: #000000;
     --color-black-light: #171717;
     --color-grey: #7c7c7c;
+    --color-grey-dark: #5f5f5f;
     --color-grey-light: #8a8a8a;
     --color-white: #ffffff;
-    --color-primary: rgb(240, 38, 38);
-    --color-primary-dark: rgb(190, 28, 28);
-    --color-primary-light: rgb(300, 28, 28);
+    --color-white-dark: #cdcdcd;
+    --color-primary: rgb(210, 38, 38);
+    --color-primary-dark: rgb(170, 28, 28);
+    --color-primary-light: rgb(255, 28, 28);
     
     --ff: "DM Sans", sans-serif;
     --h1: bold 3.375rem / 4rem var(--ff);
     --h2: bold 2.25rem / 2.25rem var(--ff);
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
-    background-color: var(--color-black);
+    background: var(--color-black);
 }
 
 html {
@@ -46,7 +48,7 @@ body {
 }
 
 section {
-    margin: var(--spacing-l)  var(--spacing-xl);
+    margin: 0 var(--spacing-xl);
 }
 
 h1 {
@@ -69,7 +71,7 @@ h3 {
     cursor: pointer;
     user-select: none;
     border-radius: var(--size-s);
-    border: 0.2rem solid var(--color-primary);
+    border: 0.15rem solid var(--color-primary);
     transition-duration: 500ms;
     background: var(--color-black);
     color: var(--color-primary);
