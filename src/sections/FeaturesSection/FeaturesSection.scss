@@ -8,7 +8,7 @@
 
     .featureContainer {
         position: relative;
-        height: var(--spacing-xxl);
+        height: var(--spacing-xxxl);
         width: inherit;
         margin-top: var(--spacing-s);
         margin-bottom: var(--spacing-l);
@@ -22,6 +22,17 @@
             width: var(--spacing-xxl);
             background-color: var(--color-grey);
             border-radius: var(--size-m);
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+        }
+
+        @for $i from 1 through 3{
+            &.feature#{$i} {
+                .img {
+                    background-image: url('./images/feature#{$i}_img.jpg')
+                }
+            }
         }
         
         .text {

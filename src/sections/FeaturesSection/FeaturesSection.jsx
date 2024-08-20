@@ -6,7 +6,7 @@ function FeaturesSection() {
             <h1 className='mainTitle'>
                 Why Us?
             </h1>
-            <div className='featureContainer'>
+            <div className='featureContainer feature1'>
                 <div className='img'>
                 </div>
                 <div className='text'>
@@ -22,7 +22,7 @@ function FeaturesSection() {
                 </div>
             </div>
 
-            <div className='featureContainer'>
+            <div className='featureContainer feature2'>
                 <div className='img'>
                 </div>
                 <div className='text'>
@@ -30,7 +30,7 @@ function FeaturesSection() {
                         Flexible schedule
                     </h1>
                     <div className='description'>
-                        Feel free to join any sections of classes every week. Arrange your time more effectively.
+                        There are at least three time slots for each class every week. Feel free to join any section every week. Arrange your time more effectively.
                     </div>
                     <div className='btn moreBtn'>
                         More
@@ -38,7 +38,7 @@ function FeaturesSection() {
                 </div>
             </div>
 
-            <div className='featureContainer'>
+            <div className='featureContainer feature3'>
                 <div className='img'>
                 </div>
                 <div className='text'>
@@ -46,7 +46,7 @@ function FeaturesSection() {
                         100+ classes
                     </h1>
                     <div className='description'>
-                        We provide 100+ classes from begginer to advanced level. Gym, yoga, HIIT and sports you have never heard of. Check out what classes we provide!
+                        We provide 100+ classes from begginer to advanced level. Gym, yoga, HIIT and sports you have perhaps never heard of. Check out what classes we provide!
                     </div>
                     <div className='btn moreBtn'>
                         More
