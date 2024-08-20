@@ -1,6 +1,6 @@
 .heroSection {
     position: relative;
-    height: var(--spacing-xxl);
+    height: var(--spacing-xxxl);
     width: inherit;
     display: flex;
     flex-direction: row;
@@ -27,7 +27,10 @@
         position: relative;
         height: inherit;
         width: var(--spacing-xxl);
-        background-color: var(--color-grey);
-        border-radius: var(--size-m);
+        border-radius: var(--size-l);
+        overflow: hidden;
+        background-image: url('./images/hero_img.jpg');
+        background-position: center;
+        background-size: cover;
     }
 }

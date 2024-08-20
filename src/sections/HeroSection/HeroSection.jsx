@@ -18,7 +18,6 @@ function HeroSection() {
                 </div>
             </div>
             <div className='img'>
-                
             </div>
         </section>
     )
