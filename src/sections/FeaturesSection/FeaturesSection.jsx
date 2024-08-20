@@ -46,7 +46,7 @@ function FeaturesSection() {
                         100+ classes
                     </h1>
                     <div className='description'>
-                        We provide 100+ classes from begginer to advanced level. Gym, yoga, HIIT and sports you have perhaps never heard of. Check out what classes we provide!
+                        We provide 100+ classes from beginner to advanced level. Gym, yoga, HIIT and sports you have perhaps never heard of. Check out what classes we provide!
                     </div>
                     <div className='btn moreBtn'>
                         More
