@@ -44,7 +44,7 @@
     &.Premium {
         .priceContainer,
         .title {
-            background: linear-gradient(90deg, rgba(253,100,255,1) 0%, rgb(35, 46, 255) 40%);
+            background: linear-gradient(90deg, rgb(251, 30, 255) 0%, rgb(35, 46, 255) 50%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -88,5 +88,7 @@
     .selectPlanBtn {
         position: absolute;
         bottom: var(--size-l);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
