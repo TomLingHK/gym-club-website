@@ -2,9 +2,9 @@ import './PlanContainer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
-function PlanContainer({ title, price, description, item }) {
+function PlanContainer({ title, price, description, item, activePlan, setActivePlan }) {
     return (
-        <div className='planContainer'>
+        <div className={'planContainer ' + (activePlan == title ? 'active' : '') } onMouseEnter={ () => setActivePlan(title) }>
             <h2 className='price'>
                 {price}
             </h2>

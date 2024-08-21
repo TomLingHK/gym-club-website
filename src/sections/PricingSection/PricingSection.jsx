@@ -1,8 +1,11 @@
 import './PricingSection.scss';
+import { useState } from 'react';
 
 import PlanContainer from '../../components/PlanContainer/PlanContainer';
 
 function PricingSection() {
+    const [activePlan, setActivePlan] = useState('Premium');
+
     const pricingInfo = [
         { title: 'Basic', price: '$19.9', description: 'Enjoy basic facilities including gym room, yoga room and sauna room!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room'] },
         { title: 'Gold', price: '$49.9', description: 'Enjoy more facilities with more privilege!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room', 'Mini golf centre', 'High priority queue'] },
@@ -14,7 +17,7 @@ function PricingSection() {
             <h1 className='mainTitle'>Pricing</h1>
             <div className='plansContainer'>
                 {pricingInfo.map( ({ title, price, description, item }) => 
-                    <PlanContainer key={title} title={title} price={price} description={description} item={item}/>
+                    <PlanContainer key={title} title={title} price={price} description={description} item={item} activePlan={activePlan} setActivePlan={setActivePlan}/>
                 )}
             </div>
         </section>
