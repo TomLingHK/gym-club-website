@@ -50,7 +50,7 @@ body {
 }
 
 section {
-    margin: 0 var(--spacing-xl);
+    margin: 0 min(var(--spacing-xl), 50px);
 }
 
 h1 {

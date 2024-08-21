@@ -1,19 +1,21 @@
 .heroSection {
     position: relative;
-    height: var(--spacing-xxxl);
+    height: 60vh;
     width: inherit;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: var(--spacing-xl) 0;
+    padding: 20vh 0;
     margin-top: 0;
     margin-bottom: var(--spacing-s);
 
     .text {
         position: relative;
+        width: 50%;
         text-align: left;
-        margin: var(--size-m);
-        margin-right: var(--spacing-l);
+        margin: 5%;
+        // margin-right: var(--spacing-l);
+        padding: var(--spacing-s) 0;
 
         .description {
             margin-top: var(--size-s);
@@ -27,8 +29,10 @@
 
     .img {
         position: relative;
-        height: inherit;
-        width: var(--spacing-xxl);
+        // height: 90%;
+        min-height: 500px;
+        width: max(var(--spacing-xxxl), 200px);
+        margin: 5% 0;
         border-radius: var(--size-l);
         overflow: hidden;
         background-image: url('./images/hero_img.jpg');
@@ -59,6 +63,19 @@
             opacity: 1;
             background-size: 90%;
             background-position: 50% 50%;
+        }
+    }
+
+    @media (orientation: portrait) {
+        flex-direction: column-reverse;
+        .text {
+            width: 100%;
+            height: 30%;
+            padding: 0;
+        }
+        .img {
+            right: 0;
+            margin: 0 0 0 auto;
         }
     }
 }

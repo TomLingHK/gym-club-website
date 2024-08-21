@@ -18,7 +18,7 @@
         padding: 0 var(--size-m);
         height: var(--size-xxl);
         width: var(--size-xxl);
-        margin-right: var(--size-xxl);
+        margin-right: var(--size-xl);
         color: var(--color-primary);
         border-radius: var(--size-m);
         background: var(--color-grey);
@@ -26,13 +26,14 @@
     
     .navContainer {
         height: inherit;
-        width: 50%;
         display: flex;
         flex-direction: row;
 
         .navItem {
-            margin: 0 var(--size-m);
-            padding: 0 var(--size-xl);
+            width: max-content;
+            text-wrap: no-wrap;
+            margin: 0 var(--size-s);
+            padding: 0 var(--size-l);
             cursor: pointer;
             user-select: none;
             border-radius: var(--size-xl);
