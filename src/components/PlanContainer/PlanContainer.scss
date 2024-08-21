@@ -21,8 +21,33 @@
         }
     }
 
-    .price {
+    .priceContainer {
         color: var(--color-black);
+        .price {
+            display: inline-block;
+        }
+        .monthTxt {
+            display: inline-block;
+            font-size: var(--size-m);
+        }
+    }
+
+    &.Gold {
+        .priceContainer,
+        .title {
+            background: linear-gradient(to right, gold, rgb(255, 179, 3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &.Premium {
+        .priceContainer,
+        .title {
+            background: linear-gradient(90deg, rgba(253,100,255,1) 0%, rgb(35, 46, 255) 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     .title {
@@ -40,6 +65,7 @@
     }
 
     .details {
+        font-style: italic;
         .item {
             margin: var(--size-xs) 0;
             font-size: var(--size-m);
