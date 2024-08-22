@@ -2,15 +2,32 @@
     position: relative;
     width: inherit;
 
+    #featuresVideo {
+        opacity: 0;
+        transition: opacity ease-in-out 1000ms;
+    }
+
+    &.active {
+        #featuresVideo {
+            position: fixed;
+            right: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0.3;
+        }
+    }
+
     .mainTitle {
         position: sticky;
         top: 0;
         font-style: italic;
         color: var(--color-white);
-        background: var(--color-black);
+        // background: var(--color-black);
         z-index: 1;
         height: 6rem;
         line-height: 6rem;
+        opacity: 0.8;
     }
 
     .featuresContainer {

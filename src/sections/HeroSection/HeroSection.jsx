@@ -1,8 +1,23 @@
-import './HeroSection.scss'
+import './HeroSection.scss';
+import { useEffect } from 'react';
+import { useInView } from "react-intersection-observer";
 
 function HeroSection() {
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        const heroVideo = document.getElementById('heroVideo');
+        if (inView) heroVideo.play();
+        else heroVideo.pause();
+    }, [inView])
+
     return (
-        <section className='heroSection scroll-checkpoint'>
+        <section ref={ref} className={'heroSection scroll-checkpoint ' + (inView ? 'active' : '')}>
+            <video autoPlay muted loop id="heroVideo">
+                <source src="./videos/hero_bg_vid.mp4" type="video/mp4" />
+            </video>
             <div className='text'>
                 <h1 className='title'>
                     Stop Thinking,

@@ -50,7 +50,11 @@ body {
 }
 
 section {
-    margin: 0 min(var(--spacing-xl), 50px);
+    margin: 0 var(--spacing-xl);
+
+    @media (orientation: portrait) {
+        margin: 0 50px;
+    }
 }
 
 h1 {

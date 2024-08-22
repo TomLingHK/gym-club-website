@@ -22,7 +22,7 @@ function PlanContainer({ title, price, description, item, activePlan, setActiveP
             <div className='details'>
                 {item.map( type => {
                     return (
-                        <div className='item' key='type'>
+                        <div className='item' key={type}>
                             <FontAwesomeIcon icon={faCircleCheck} className='tickIcon' />
                             <div className='text'>
                                 {type}
