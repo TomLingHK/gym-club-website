@@ -10,17 +10,22 @@
     margin-bottom: var(--spacing-s);
 
     #heroVideo {
+        position: fixed;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
         opacity: 0;
         transition: opacity ease-in-out 1000ms;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
     }
 
     &.active {
         #heroVideo {
-            position: fixed;
-            right: 0;
-            top: 0;
-            min-width: 100%;
-            min-height: 100%;
             opacity: 0.3;
         }
     }

@@ -3,17 +3,17 @@
     width: inherit;
 
     #featuresVideo {
+        position: fixed;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
         opacity: 0;
         transition: opacity ease-in-out 1000ms;
     }
 
     &.active {
         #featuresVideo {
-            position: fixed;
-            right: 0;
-            top: 0;
-            min-width: 100%;
-            min-height: 100%;
             opacity: 0.3;
         }
     }
