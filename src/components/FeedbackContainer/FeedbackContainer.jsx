@@ -5,15 +5,15 @@ function FeedbackContainer({ highlightContent, content, person }) {
         <div className='feedbackContainer'>
             <div className='txt'>
                 <div className='highlightContainer'>
-                    <h2 className='openQuotationMark'>
+                    <h1 className='openQuotationMark'>
                         “
-                    </h2>
+                    </h1>
                     <h3 className='highlightContent'>
                         { highlightContent }
                     </h3>
-                    <h2 className='closeQuotationMark'>
+                    <h1 className='closeQuotationMark'>
                         ”
-                    </h2>
+                    </h1>
                 </div>      
                 <div className='content'>
                     { content }

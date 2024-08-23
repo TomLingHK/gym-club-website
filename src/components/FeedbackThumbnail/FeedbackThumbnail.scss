@@ -1,0 +1,12 @@
+.feedbackThumbnail {
+    background: var(--color-white);
+    border-radius: 10%;
+    height: var(--spacing-m);
+    width: var(--spacing-m);
+    cursor: pointer;
+    transition-duration: 500ms;
+
+    &:hover {
+        background: var(--color-grey);
+    }
+}

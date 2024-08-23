@@ -1,8 +1,18 @@
 .feedbackSection {
     position: relative;
-    height: 80vh;
+    height: 70vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
     background: var(--color-grey-dark);
     border-radius: var(--spacing-s);
+    padding: 5vh;
+
+    .feedbackThumbnailContainer {
+        position: relative;
+        height: var(--spacing-m);
+        display: flex;
+        flex-direction: row;
+        margin-top: 4%;
+        justify-content: space-between;
+    }
 }
