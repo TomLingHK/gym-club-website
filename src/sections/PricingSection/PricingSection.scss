@@ -1,10 +1,8 @@
 .pricingSection {
     position: relative;
     height: 80vh;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    background: var(--color-grey-dark);
-    border-radius: var(--spacing-s);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 
     #pricingVideo {
         position: fixed;
@@ -27,21 +25,26 @@
         }
     }
 
-    .mainTitle {
-        position: relative;
-        padding-top: var(--spacing-s);
-        height: 4rem;
-        text-align: center;
-        width: 100%;
-        line-height: 4rem;
-        font-style: italic;
-    }
-
-    .plansContainer {
-        position: relative;
-        margin-top: var(--spacing-s);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+    .pricingContainer {
+        height: inherit;
+        background: var(--color-grey-dark);
+        border-radius: var(--spacing-s);
+        .mainTitle {
+            position: relative;
+            padding-top: var(--spacing-s);
+            height: 4rem;
+            text-align: center;
+            width: 100%;
+            line-height: 4rem;
+            font-style: italic;
+        }
+    
+        .plansContainer {
+            position: relative;
+            margin-top: var(--spacing-s);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
     }
 }

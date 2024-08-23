@@ -7,7 +7,7 @@ import PlanContainer from '../../components/PlanContainer/PlanContainer';
 function PricingSection() {
     const [activePlan, setActivePlan] = useState('Premium');
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0.2,
     });
 
     useEffect(() => {
@@ -27,11 +27,13 @@ function PricingSection() {
             <video autoPlay muted loop id="pricingVideo">
                 <source src="./videos/pricing_bg_vid.mp4" type="video/mp4" />
             </video>
-            <h1 className='mainTitle'>Pricing</h1>
-            <div className='plansContainer'>
-                {pricingInfo.map( ({ title, price, description, item }) => 
-                    <PlanContainer key={title} title={title} price={price} description={description} item={item} activePlan={activePlan} setActivePlan={setActivePlan}/>
-                )}
+            <div className='pricingContainer'>
+                <h1 className='mainTitle'>Pricing</h1>
+                <div className='plansContainer'>
+                    {pricingInfo.map( ({ title, price, description, item }) => 
+                        <PlanContainer key={title} title={title} price={price} description={description} item={item} activePlan={activePlan} setActivePlan={setActivePlan}/>
+                    )}
+                </div>
             </div>
         </section>
     )

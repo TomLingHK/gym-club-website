@@ -6,7 +6,7 @@ import FeatureContainer from '../../components/FeatureContainer/FeatureContainer
 
 function FeaturesSection() {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0.2,
     });
     const featureInfo = [
         { id: 'feature1', title: 'Safety first', 

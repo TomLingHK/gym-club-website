@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 function HeroSection() {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0.2,
     });
 
     useEffect(() => {

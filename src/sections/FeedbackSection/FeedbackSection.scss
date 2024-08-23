@@ -1,0 +1,71 @@
+.feedbackSection {
+    position: relative;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background: var(--color-grey-dark);
+    border-radius: var(--spacing-s);
+
+    .feedbackContainer {
+        position: absolute;
+        width: 80%;
+        height: 60%;
+        margin: 0 10%;
+        margin-top: var(--spacing-s);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: var(--color-white);
+        color: var(--color-black);
+        border-radius: var(--spacing-s);
+
+        .txt {
+            width: 50%;
+            margin: 5% 0;
+            .highlightContainer {
+                .openQuotationMark,
+                .closeQuotationMark {
+                    color: var(--color-primary-dark);
+                }
+                .openQuotationMark {
+                    text-align: left;
+                }
+                .highlightContent {
+                    text-align: center;
+                    font-style: italic;
+                    font-weight: bold;
+                    color: var(--color-primary);
+                }
+                .closeQuotationMark {
+                    text-align: right;
+                }
+            }
+            .content {
+                color: var(--color-primary-dark);
+                font-size: var(--size-m);
+                line-height: var(--size-xl);
+            }
+            .name {
+                color: var(--color-primary);
+                margin-top: var(--size-m);
+                font-size: var(--size-m);
+                line-height: var(--size-xl);
+                font-weight: bold;
+            }
+        }
+
+        .img {
+            position: relative;
+            height: 80%;
+            width: 30%;
+            margin: 5% 0;
+            border-radius: var(--size-l);
+            overflow: hidden;
+            // background-image: url('./images/hero_img.jpg');
+            // background-repeat: no-repeat;
+            background: var(--color-grey-dark);
+            border: 2px solid var(--color-white);
+            animation: imgAnimate 10s infinite;
+        }
+    }
+}

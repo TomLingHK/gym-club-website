@@ -1,5 +1,6 @@
 // Components
 import FeaturesSection from '../sections/FeaturesSection/FeaturesSection';
+import FeedbackSection from '../sections/FeedbackSection/FeedbackSection';
 import HeroSection from '../sections/HeroSection/HeroSection';
 import PricingSection from '../sections/PricingSection/PricingSection';
 
@@ -9,6 +10,7 @@ function Home() {
             <HeroSection/>
             <FeaturesSection/>
             <PricingSection/>
+            <FeedbackSection/>
         </>
     )
 }
