@@ -1,10 +1,20 @@
 import './PricingSection.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useInView } from "react-intersection-observer";
 
 import PlanContainer from '../../components/PlanContainer/PlanContainer';
 
 function PricingSection() {
     const [activePlan, setActivePlan] = useState('Premium');
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        const video = document.getElementById('pricingVideo');
+        if (inView) video.play();
+        else video.pause();
+    }, [inView])
 
     const pricingInfo = [
         { title: 'Basic', price: '$19.9', description: 'Enjoy basic facilities including gym room, yoga room and sauna room!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room'] },
@@ -13,7 +23,10 @@ function PricingSection() {
     ]
 
     return (
-        <section className='pricingSection scroll-checkpoint'>
+        <section ref={ref} className={'pricingSection scroll-checkpoint ' + (inView ? 'active' : '')}>
+            <video autoPlay muted loop id="pricingVideo">
+                <source src="./videos/pricing_bg_vid.mp4" type="video/mp4" />
+            </video>
             <h1 className='mainTitle'>Pricing</h1>
             <div className='plansContainer'>
                 {pricingInfo.map( ({ title, price, description, item }) => 

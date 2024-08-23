@@ -30,9 +30,9 @@ function FeaturesSection() {
     ];
 
     useEffect(() => {
-        const featuresVideo = document.getElementById('featuresVideo');
-        if (inView) featuresVideo.play();
-        else featuresVideo.pause();
+        const video = document.getElementById('featuresVideo');
+        if (inView) video.play();
+        else video.pause();
     }, [inView])
 
 

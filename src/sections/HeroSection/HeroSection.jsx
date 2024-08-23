@@ -8,9 +8,9 @@ function HeroSection() {
     });
 
     useEffect(() => {
-        const heroVideo = document.getElementById('heroVideo');
-        if (inView) heroVideo.play();
-        else heroVideo.pause();
+        const video = document.getElementById('heroVideo');
+        if (inView) video.play();
+        else video.pause();
     }, [inView])
 
     return (

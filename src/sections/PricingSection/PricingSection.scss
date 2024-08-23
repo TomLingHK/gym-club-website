@@ -6,6 +6,27 @@
     background: var(--color-grey-dark);
     border-radius: var(--spacing-s);
 
+    #pricingVideo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        transition: opacity ease-in-out 1000ms;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    &.active {
+        #pricingVideo {
+            opacity: 0.4;
+        }
+    }
+
     .mainTitle {
         position: relative;
         padding-top: var(--spacing-s);
