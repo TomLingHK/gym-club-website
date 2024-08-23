@@ -1,33 +1,26 @@
+import { useState } from 'react';
+
+import FeedbackContainer from '../../components/FeedbackContainer/FeedbackContainer';
 import './FeedbackSection.scss';
 
 function FeedbackSection() {
+    const [curIndex, setCurIndex] = useState(0);
+
+    const feedbackData = [
+        {
+            highlightContent: 'I lost 5kg in three months!',
+            content: 
+            `
+                I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
+                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+            `,
+            person: 'Kitty Kramer'
+        },
+    ]
+
     return (
         <section className={'feedbackSection scroll-checkpoint'}>
-            <div className='feedbackContainer'>
-                <div className='txt'>
-                    <div className='highlightContainer'>
-                        <h2 className='openQuotationMark'>
-                            “
-                        </h2>
-                        <h3 className='highlightContent'>
-                            I lost 5kg in three months!
-                        </h3>
-                        <h2 className='closeQuotationMark'>
-                            ”
-                        </h2>
-                    </div>      
-                    <div className='content'>
-                        I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
-                        Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
-                    </div>
-                    <div className='name'>
-                        - Kitty Kramer
-                    </div>
-                </div>
-                <div className='img'>
-
-                </div>
-            </div>
+            <FeedbackContainer highlightContent={feedbackData[curIndex].highlightContent} content={feedbackData[curIndex].content} person={feedbackData[curIndex].person} />
         </section>
     )
 }
