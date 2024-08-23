@@ -22,7 +22,7 @@ function HeroSection() {
                 <h1 className='title'>
                     Stop Thinking,
                 </h1>
-                <h1 className='title'>
+                <h1 className='title title2'>
                     Start Now!
                 </h1>
                 <div className='description'>
