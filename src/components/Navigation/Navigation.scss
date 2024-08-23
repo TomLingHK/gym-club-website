@@ -38,7 +38,7 @@
             cursor: pointer;
             user-select: none;
             border-radius: var(--size-xl);
-            transition-duration: 500ms;
+            transition-duration: var(--duration-normal);
 
             &:hover {
                 background: var(--color-primary);

@@ -7,7 +7,7 @@
     border: 3px solid var(--color-black);
     border-radius: var(--size-m);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    transition-duration: 500ms;
+    transition-duration: var(--duration-normal);
 
     &.active {
         border: 3px solid var(--color-primary-light);

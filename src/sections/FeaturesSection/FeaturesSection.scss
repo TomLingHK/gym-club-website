@@ -9,7 +9,7 @@
         min-width: 100%;
         min-height: 100%;
         opacity: 0;
-        transition: opacity ease-in-out 1000ms;
+        transition: opacity ease-in-out var(--duration-long);
     }
 
     &.active {

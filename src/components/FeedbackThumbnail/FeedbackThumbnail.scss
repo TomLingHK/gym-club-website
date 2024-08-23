@@ -4,7 +4,7 @@
     height: var(--spacing-m);
     width: var(--spacing-m);
     cursor: pointer;
-    transition-duration: 500ms;
+    transition-duration: var(--duration-normal);
     overflow: hidden;
 
     &:hover {

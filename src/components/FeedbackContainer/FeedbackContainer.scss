@@ -8,7 +8,20 @@
     justify-content: space-evenly;
     background: var(--color-white);
     color: var(--color-black);
-    border-radius: var(--spacing-s);
+    border-radius: var(--size-l);
+
+    .fading {
+        animation: fadeInAnimate var(--duration-long);
+    }
+
+    @keyframes fadeInAnimate {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     .txt {
         width: 50%;
