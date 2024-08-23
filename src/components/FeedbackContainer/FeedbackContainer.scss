@@ -47,15 +47,10 @@
 
     .img {
         position: relative;
-        height: 80%;
-        width: 30%;
+        height: auto;
+        width: 40%;
         margin: 5% 0;
         border-radius: var(--size-l);
         overflow: hidden;
-        // background-image: url('./images/hero_img.jpg');
-        // background-repeat: no-repeat;
-        background: var(--color-grey-dark);
-        border: 2px solid var(--color-white);
-        animation: imgAnimate 10s infinite;
     }
 }

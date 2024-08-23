@@ -5,8 +5,15 @@
     width: var(--spacing-m);
     cursor: pointer;
     transition-duration: 500ms;
+    overflow: hidden;
 
     &:hover {
-        background: var(--color-grey);
+        opacity: 0.8;
+    }
+
+    .img {
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 }

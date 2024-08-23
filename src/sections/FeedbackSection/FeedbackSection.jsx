@@ -12,7 +12,8 @@ function FeedbackSection() {
             highlightContent: 'I lost 5kg in three months!',
             content: 
             `
-                I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
+                I have always been a person who lacks discipline and would like to lose weight. 
+                By following my coach's strict plan, I was able to lost 5kg in three months!
                 Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
             `,
             person: 'Kitty Kramer',
@@ -22,8 +23,9 @@ function FeedbackSection() {
             highlightContent: 'Large space and good privacy.',
             content: 
             `
-                I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
-                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+                I am highly impressed by the spaciousness and privacy offered at your gym center. 
+                The ample room to move freely and the secluded areas for focused workouts truly enhance the overall experience. 
+                It's a rare gem to find such a welcoming and private environment for fitness enthusiasts like me.
             `,
             person: 'Bill Benjamin',
             id: 'billBenjamin'
@@ -32,18 +34,22 @@ function FeedbackSection() {
             highlightContent: 'Fits my schedule!',
             content: 
             `
-                I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
-                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+                The flexible time slots at your gym center have truly transformed my fitness routine. 
+                Being able to seamlessly fit workouts into my busy schedule is a game-changer. 
+                The variety of timing options ensures that staying active is convenient and stress-free. 
+                Thank you for making it so easy to prioritize my health and well-being.
             `,
             person: 'James Collin',
             id: 'jamesCollin'
         },
         {
-            highlightContent: 'Clean facilities!',
+            highlightContent: 'Top-notch facilities',
             content: 
             `
-                I have always been a person who lacks discipline and would like to lose weight. By following my coach's strict plan, I was able to lost 5kg in three months!
-                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+                The top-notch facilities at your gym center have exceeded my expectations. 
+                From state-of-the-art equipment to well-maintained amenities, every visit feels like a premium experience. 
+                The attention to detail in providing quality resources for workouts is truly commendable. 
+                Thank you for creating a space where fitness goals are not just met but exceeded.
             `,
             person: 'Elizabeth Watson',
             id: 'elizabethWatson'
@@ -53,10 +59,10 @@ function FeedbackSection() {
 
     return (
         <section className={'feedbackSection scroll-checkpoint'}>
-            <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } />
+            <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
             <div className='feedbackThumbnailContainer'>
-                {feedbackData.map((picture, index) => 
-                    <FeedbackThumbnail key={index} index={index} setCurIndex={setCurIndex} picture={picture} id={id} />
+                {feedbackData.map((item, index) => 
+                    <FeedbackThumbnail key={index} index={index} setCurIndex={setCurIndex} id={item.id} />
                 )}
             </div>
         </section>

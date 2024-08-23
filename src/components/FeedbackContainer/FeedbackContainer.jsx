@@ -1,6 +1,6 @@
 import './FeedbackContainer.scss'
 
-function FeedbackContainer({ highlightContent, content, person }) {
+function FeedbackContainer({ highlightContent, content, person, id }) {
     return (
         <div className='feedbackContainer'>
             <div className='txt'>
@@ -22,9 +22,7 @@ function FeedbackContainer({ highlightContent, content, person }) {
                     - { person }
                 </div>
             </div>
-            <div className='img'>
-
-            </div>
+            <img src={`./images/${id}_img.jpg`} alt="Happy person" className='img' />
         </div>
     )
 }

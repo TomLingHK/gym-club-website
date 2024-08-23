@@ -1,8 +1,10 @@
 import './FeedbackThumbnail.scss'
 
-function FeedbackThumbnail({ index, setCurIndex, picture }) {
+function FeedbackThumbnail({ index, setCurIndex, id }) {
     return (
-        <div className='feedbackThumbnail' onClick={ () => setCurIndex(index) }></div> 
+        <div className='feedbackThumbnail' onClick={ () => setCurIndex(index) }>
+            <img src={`./images/${id}_img.jpg`} alt="Happy person" className='img' />
+        </div> 
     )
 }
 
