@@ -60,11 +60,12 @@
 
     .img {
         position: relative;
-        height: auto;
+        height: inherit;
         width: 40%;
         margin: 5% 0;
         border-radius: var(--size-l);
         overflow: hidden;
         object-fit: cover;
+        object-position: top;
     }
 }

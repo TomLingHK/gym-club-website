@@ -35,7 +35,7 @@
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
     --duration-normal: 500ms;
-    --duration-long: 1000ms;
+    --duration-long: 700ms;
 
     background: var(--color-black);
     user-select: none;

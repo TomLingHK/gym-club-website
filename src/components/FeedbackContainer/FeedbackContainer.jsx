@@ -36,7 +36,7 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     - { person }
                 </div>
             </div>
-            <img src={`./images/${id}_img.jpg`} alt="Happy person" className={'img ' + (fading ? 'fading' : '')} />
+            <img src={`./images/people/${id}_img.jpg`} alt="Happy person" className={'img ' + (fading ? 'fading' : '')} />
         </div>
     )
 }
