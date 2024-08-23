@@ -90,5 +90,9 @@
         bottom: var(--size-l);
         left: 50%;
         transform: translateX(-50%);
+
+        &:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
     }
 }
