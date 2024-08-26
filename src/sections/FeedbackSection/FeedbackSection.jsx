@@ -9,15 +9,16 @@ function FeedbackSection() {
 
     const feedbackData = [
         {
-            highlightContent: 'I lost 5kg in three months!',
+            highlightContent: 'Top-notch facilities',
             content: 
             `
-                I have always been a person who lacks discipline and would like to lose weight. 
-                By following my coach's strict plan, I was able to lost 5kg in three months!
-                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+                The top-notch facilities at your gym center have exceeded my expectations. 
+                From state-of-the-art equipment to well-maintained amenities, every visit feels like a premium experience. 
+                The attention to detail in providing quality resources for workouts is truly commendable. 
+                Thank you for creating a space where fitness goals are not just met but exceeded.
             `,
-            person: 'Kitty Kramer',
-            id: 'kittyKramer'
+            person: 'Elizabeth Watson',
+            id: 'elizabethWatson'
         },
         {
             highlightContent: 'Large space and good privacy.',
@@ -31,6 +32,17 @@ function FeedbackSection() {
             id: 'billBenjamin'
         },
         {
+            highlightContent: 'I lost 5kg in three months!',
+            content: 
+            `
+                I have always been a person who lacks discipline and would like to lose weight. 
+                By following my coach's strict plan, I was able to lost 5kg in three months!
+                Shout out to my coach Mike Miller who is helpful and has professional coaching experience for years.
+            `,
+            person: 'Kitty Kramer',
+            id: 'kittyKramer'
+        },
+        {
             highlightContent: 'Fits my schedule!',
             content: 
             `
@@ -42,23 +54,12 @@ function FeedbackSection() {
             person: 'James Collin',
             id: 'jamesCollin'
         },
-        {
-            highlightContent: 'Top-notch facilities',
-            content: 
-            `
-                The top-notch facilities at your gym center have exceeded my expectations. 
-                From state-of-the-art equipment to well-maintained amenities, every visit feels like a premium experience. 
-                The attention to detail in providing quality resources for workouts is truly commendable. 
-                Thank you for creating a space where fitness goals are not just met but exceeded.
-            `,
-            person: 'Elizabeth Watson',
-            id: 'elizabethWatson'
-        },
     ];
     const { highlightContent, content, person, id } = feedbackData[curIndex];
 
     return (
         <section className={'feedbackSection scroll-checkpoint'}>
+            <h1 className='mainTitle'>Users Reviews</h1>
             <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
             <div className='feedbackThumbnailContainer'>
                 {feedbackData.map((item, index) => 

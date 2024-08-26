@@ -1,14 +1,14 @@
 
 .feedbackContainer {
     position: relative;
-    width: 100%;
-    height: 80%;
+    height: 65%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background: var(--color-white);
     color: var(--color-black);
     border-radius: var(--size-l);
+    align-items: center;
 
     .fading {
         animation: fadeInAnimate var(--duration-long);
@@ -60,9 +60,8 @@
 
     .img {
         position: relative;
-        height: inherit;
+        height: 80%;
         width: 40%;
-        margin: 5% 0;
         border-radius: var(--size-l);
         overflow: hidden;
         object-fit: cover;

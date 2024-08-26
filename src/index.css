@@ -54,7 +54,7 @@ body {
 }
 
 section {
-    margin: 0 var(--spacing-xl);
+    margin: 0 var(--spacing-xxxl);
 
     @media (orientation: portrait) {
         margin: 0 50px;
