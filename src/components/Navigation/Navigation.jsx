@@ -3,9 +3,9 @@ import './Navigation.scss';
 import { useNavigate } from 'react-router-dom';
 
 function Navigation() {
-    const navigate = useNavigate();
-    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
     const [isPortrait, setIsPortrait] = useState(undefined);
+    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
