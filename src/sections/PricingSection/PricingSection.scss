@@ -17,6 +17,7 @@
         -o-filter: blur(5px);
         -ms-filter: blur(5px);
         filter: blur(5px);
+        z-index: -1;
     }
 
     &.active {
@@ -29,6 +30,7 @@
         height: inherit;
         background: var(--color-grey-dark);
         border-radius: var(--spacing-s);
+        opacity: 0.9;
         .mainTitle {
             position: relative;
             padding-top: var(--spacing-s);

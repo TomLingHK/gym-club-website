@@ -10,6 +10,7 @@
         min-height: 100%;
         opacity: 0;
         transition: opacity ease-in-out var(--duration-long);
+        z-index: -1;
     }
 
     &.active {
