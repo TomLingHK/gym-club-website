@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
-import './FeedbackContainer.scss'
+import { useEffect, useState, useContext } from 'react';
+import './FeedbackContainer.scss';
+import OrientationContext from '../../store/orientationContext';
 
 function FeedbackContainer({ highlightContent, content, person, id }) {
+    const orientation = useContext(OrientationContext);
     const [fading, setFading] = useState(false);
     let timeoutID = undefined;
 
@@ -16,7 +18,7 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
     }, [id])
 
     return (
-        <div className={'feedbackContainer '}>
+        <div className={'feedbackContainer ' + orientation}>
             <div className='txt'>
                 <div className='highlightContainer'>
                     <h1 className='openQuotationMark'>

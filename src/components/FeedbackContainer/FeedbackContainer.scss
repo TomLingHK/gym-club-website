@@ -67,4 +67,30 @@
         object-fit: cover;
         object-position: top;
     }
+
+    &.portrait {
+        flex-direction: column-reverse;
+        height: 80%;
+        padding: var(--size-s);
+
+        .txt,
+        .img {
+            width: 100%;
+        }
+
+        .txt {
+            height: 60%;
+            margin: 0;
+            .content {
+                font-size: var(--size-s);
+            }
+            .name {
+                margin-top: var(--size-xs);
+            }
+        }
+
+        .img {
+            height: 35%;
+        }
+    }
 }

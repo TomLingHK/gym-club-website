@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
 import './FeedbackSection.scss';
+import OrientationContext from '../../store/orientationContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import FeedbackContainer from '../../components/FeedbackContainer/FeedbackContainer';
 import FeedbackThumbnail from '../../components/FeedbackThumbnail/FeedbackThumbnail';
 
 function FeedbackSection() {
+    const orientation = useContext(OrientationContext);
     const [curIndex, setCurIndex] = useState(0);
     const { ref, inView } = useInView({
         threshold: 0.28,
@@ -60,17 +64,38 @@ function FeedbackSection() {
         },
     ];
     const { highlightContent, content, person, id } = feedbackData[curIndex];
+    const firstItem = 0;
+    const lastItem = feedbackData.length - 1;
+    
+    function leftArrowClick() {
+        if (curIndex != firstItem)
+            setCurIndex(curIndex - 1);
+    }
+
+    function rightArrowClick() {
+        if (curIndex != lastItem)
+            setCurIndex(curIndex + 1);
+    }
 
     return (
-        <section ref={ref} className={'feedbackSection scroll-checkpoint'}>
+        <section ref={ref} className={'feedbackSection scroll-checkpoint ' + orientation}>
             {inView && <img className='bg' src="./images/feedback_img.jpg" alt="beautiful_woods" />}
             <h1 className='mainTitle'>User Reviews</h1>
             <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
-            <div className='feedbackThumbnailContainer'>
-                {feedbackData.map((item, index) => 
-                    <FeedbackThumbnail key={index} index={index} setCurIndex={setCurIndex} id={item.id} />
-                )}
-            </div>
+            { orientation=='landscape' 
+            ?
+                <div className='feedbackThumbnailContainer'>
+                    {feedbackData.map((item, index) => 
+                        <FeedbackThumbnail key={index} index={index} setCurIndex={setCurIndex} id={item.id} />
+                    )}
+                </div>
+            :
+                <div className='arrowsContainer'>
+                    <FontAwesomeIcon icon={faArrowLeft} className={'arrowIcon arrowLeftIcon ' + (curIndex === firstItem ? 'inactive' : 'active')} onClick={leftArrowClick} />
+                    <FontAwesomeIcon icon={faArrowRight} className={'arrowIcon arrowRightIcon ' + (curIndex === lastItem ? 'inactive' : 'active')} onClick={rightArrowClick} />
+                </div>
+            }
+
         </section>
     )
 }

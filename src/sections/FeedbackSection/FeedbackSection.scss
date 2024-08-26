@@ -1,6 +1,6 @@
 .feedbackSection {
     position: relative;
-    height: 80vh;
+    height: 82vh;
     margin-top: 3vh;
     margin-bottom: 7vh;
     background: var(--color-grey-dark);
@@ -30,5 +30,22 @@
         flex-direction: row;
         margin-top: var(--size-xl);
         justify-content: space-evenly;
+    }
+
+    &.portrait {
+        padding: 4vh 2vh;
+        .arrowsContainer {
+            .arrowIcon {
+                margin: var(--size-s);
+                height: var(--size-xl);
+                width: var(--size-xl);
+                border: 2px solid var(--color-white);
+                border-radius: 50%;
+
+                &.inactive {
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 }
