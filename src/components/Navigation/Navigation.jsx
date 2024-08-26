@@ -1,29 +1,12 @@
-import { useEffect, useState } from 'react';
-import './Navigation.scss';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Navigation.scss';
+import OrientationContext from '../../store/orientationContext';
 
 function Navigation() {
-    const [isPortrait, setIsPortrait] = useState(undefined);
     const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
+    const orientation = useContext(OrientationContext);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
-            const portrait = e.matches;
-        
-            if (portrait) {
-                setIsPortrait('portrait');
-            } else {
-                setIsPortrait('landscape');
-                
-            }
-        });
-
-        if (isPortrait == undefined){
-            window.matchMedia("(orientation: portrait)").matches ? setIsPortrait('portrait') : setIsPortrait('landscape');
-        }
-    }, [])
-    
 
     function onNavClick($item) {
         switch ($item) {
@@ -36,11 +19,11 @@ function Navigation() {
     }
 
     return (
-        <div className={'navBar ' + (isPortrait=='portrait' ? 'portrait' : 'landscape')}>
+        <div className={'navBar ' + orientation}>
             <div className='logo'>
                 Logo
             </div>
-            {isPortrait=='landscape' &&
+            {orientation=='landscape' &&
             <div className='navContainer'>
                 {navItems.map(item => 
                     <div className='navItem' key={item} onClick={ () => onNavClick(item) }>{item}</div> 
