@@ -59,6 +59,10 @@ section {
     @media (orientation: portrait) {
         margin: 0 50px;
     }
+
+    @media (orientation: landscape) and (max-width: 1750px) {
+        margin: 0 var(--spacing-xl);
+    }
 }
 
 h1 {
