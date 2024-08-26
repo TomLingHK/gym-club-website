@@ -7,6 +7,16 @@
     border-radius: var(--spacing-s);
     padding: 4vh 5vh;
 
+    .bg {
+        position: fixed;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: .5;
+        z-index: -1;
+    }
+
     .mainTitle {
         text-align: center;
         margin-bottom: var(--size-xl);

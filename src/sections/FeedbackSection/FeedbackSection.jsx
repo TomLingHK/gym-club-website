@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useInView } from "react-intersection-observer";
 import './FeedbackSection.scss';
 
 import FeedbackContainer from '../../components/FeedbackContainer/FeedbackContainer';
@@ -6,6 +7,9 @@ import FeedbackThumbnail from '../../components/FeedbackThumbnail/FeedbackThumbn
 
 function FeedbackSection() {
     const [curIndex, setCurIndex] = useState(0);
+    const { ref, inView } = useInView({
+        threshold: 0.2,
+    });
 
     const feedbackData = [
         {
@@ -58,7 +62,8 @@ function FeedbackSection() {
     const { highlightContent, content, person, id } = feedbackData[curIndex];
 
     return (
-        <section className={'feedbackSection scroll-checkpoint'}>
+        <section ref={ref} className={'feedbackSection scroll-checkpoint'}>
+            {inView && <img className='bg' src="./images/feedback_img.jpg" alt="beautiful_woods" />}
             <h1 className='mainTitle'>Users Reviews</h1>
             <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
             <div className='feedbackThumbnailContainer'>
