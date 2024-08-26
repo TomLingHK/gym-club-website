@@ -95,4 +95,24 @@
             transform: translateX(-50%) scale(1.05);
         }
     }
+
+    @media (orientation: portrait) {
+        height: 28%;
+        width: 80%;
+        padding: var(--size-m);
+
+        .details {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        .selectPlanBtn {
+            bottom: var(--size-s);
+        }
+    }
+
 }

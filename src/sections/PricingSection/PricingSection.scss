@@ -49,4 +49,28 @@
             justify-content: space-evenly;
         }
     }
+
+    @media (orientation: portrait) {
+        height: 90vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        .pricingContainer {
+            .mainTitle {
+                padding-top: var(--size-xl);
+            }
+            .plansContainer {
+                margin-top: 0;
+                flex-direction: column;
+                height: 90%;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &.active {
+            #pricingVideo {
+                // transform: translateX(33%);
+            }
+        }
+    }
 }

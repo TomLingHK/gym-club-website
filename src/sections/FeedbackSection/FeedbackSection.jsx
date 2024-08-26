@@ -64,7 +64,7 @@ function FeedbackSection() {
     return (
         <section ref={ref} className={'feedbackSection scroll-checkpoint'}>
             {inView && <img className='bg' src="./images/feedback_img.jpg" alt="beautiful_woods" />}
-            <h1 className='mainTitle'>Users Reviews</h1>
+            <h1 className='mainTitle'>User Reviews</h1>
             <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
             <div className='feedbackThumbnailContainer'>
                 {feedbackData.map((item, index) => 

@@ -35,4 +35,10 @@
             flex-direction: row-reverse;
         }
     }
+
+    @media (orientation: portrait) {
+        #featuresVideo {
+            transform: translateX(33%);
+        }
+    }
 }

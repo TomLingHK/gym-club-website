@@ -110,4 +110,10 @@
             margin: 0 0 0 auto;
         }
     }
+
+    @media (orientation: portrait) {
+        #heroVideo {
+            transform: translateX(33%);
+        }
+    }
 }
