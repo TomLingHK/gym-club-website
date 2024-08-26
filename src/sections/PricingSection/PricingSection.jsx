@@ -7,7 +7,7 @@ import PlanContainer from '../../components/PlanContainer/PlanContainer';
 function PricingSection() {
     const [activePlan, setActivePlan] = useState('Premium');
     const { ref, inView } = useInView({
-        threshold: 0.2,
+        threshold: 0.28,
     });
 
     useEffect(() => {

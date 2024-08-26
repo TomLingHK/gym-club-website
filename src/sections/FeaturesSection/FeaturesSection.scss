@@ -41,4 +41,12 @@
             transform: translateX(33%);
         }
     }
+
+    @media (orientation: portrait) {
+        .featuresContainer {
+            .featureContainer:nth-child(odd) {
+                flex-direction: column;
+            }
+        }
+    }
 }

@@ -1,4 +1,9 @@
 .planContainer {
+    --color-gold: gold;
+    --color-orange: rgb(255, 179, 3);
+    --color-purple: rgb(251, 30, 255);
+    --color-blue: rgb(35, 46, 255);
+
     position: relative;
     height: 50vh;
     width: 240px;
@@ -35,7 +40,7 @@
     &.Gold {
         .priceContainer,
         .title {
-            background: linear-gradient(to right, gold, rgb(255, 179, 3));
+            background: linear-gradient(90deg, var(--color-gold) 25%, var(--color-orange) 50%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -44,7 +49,7 @@
     &.Premium {
         .priceContainer,
         .title {
-            background: linear-gradient(90deg, rgb(251, 30, 255) 0%, rgb(35, 46, 255) 50%);
+            background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 50%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -62,6 +67,7 @@
         color: var(--color-black-light);
         line-height: var(--size-l);
         margin: var(--size-s) 0;
+        font-size: var(--size-m);
     }
 
     .details {
@@ -98,12 +104,55 @@
 
     @media (orientation: portrait) {
         height: 28%;
-        width: 80%;
-        padding: var(--size-m);
+        width: 85%;
+        padding: var(--size-xs) var(--size-s);
+
+        .priceContainer,
+        .title {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .priceContainer {
+            text-align: left;
+            .monthTxt {
+                display: inline-block;
+                font-size: var(--size-s);
+            }
+        }
+
+        .title {
+            text-align: right;
+        }
+
+        &.Gold {
+            .title {
+                background: linear-gradient(90deg, gold 75%, rgb(255, 179, 3) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &.Premium {
+            .title {
+                background: linear-gradient(90deg, var(--color-purple) 50%, var(--color-blue) 75%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .description {
+            margin: 0 0 var(--size-xxs) 0;
+            line-height: var(--size-m);
+        }
 
         .details {
             display: grid;
             grid-template-columns: auto auto;
+            .item {
+                margin: var(--size-xxs) 0;
+                font-size: var(--size-s);
+            }
         }
 
         .title {
@@ -111,7 +160,7 @@
         }
 
         .selectPlanBtn {
-            bottom: var(--size-s);
+            bottom: var(--size-xs);
         }
     }
 

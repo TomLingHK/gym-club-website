@@ -8,7 +8,7 @@ import FeedbackThumbnail from '../../components/FeedbackThumbnail/FeedbackThumbn
 function FeedbackSection() {
     const [curIndex, setCurIndex] = useState(0);
     const { ref, inView } = useInView({
-        threshold: 0.2,
+        threshold: 0.28,
     });
 
     const feedbackData = [

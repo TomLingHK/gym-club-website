@@ -55,8 +55,9 @@
         padding-top: 5vh;
         padding-bottom: 5vh;
         .pricingContainer {
+            border-radius: var(--size-xl);
             .mainTitle {
-                padding-top: var(--size-xl);
+                padding-top: 0;
             }
             .plansContainer {
                 margin-top: 0;

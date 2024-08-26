@@ -51,4 +51,17 @@
             bottom: 0;
         }
     }
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+
+
+        .img {
+            width: 100%;
+        }
+        .text {
+            width: 100%;
+            margin: var(--size-xl) 0;
+        }
+    }
 }

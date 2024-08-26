@@ -34,6 +34,10 @@
     --h2: bold 2.25rem / 2.25rem var(--ff);
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
+    --h1-portrait: bold 2.375rem / 3rem var(--ff);
+    --h2-portrait: bold 1.25rem / 1.25rem var(--ff);
+    --h3-portrait: bold 1rem / 1.225rem var(--ff);
+
     --duration-normal: 500ms;
     --duration-long: 700ms;
 
@@ -57,7 +61,7 @@ section {
     margin: 0 var(--spacing-xxxl);
 
     @media (orientation: portrait) {
-        margin: 0 50px;
+        margin: 0 25px;
     }
 
     @media (orientation: landscape) and (max-width: 1750px) {
@@ -68,16 +72,26 @@ section {
 h1 {
     font: var(--h1);
     margin: 4px 0;
+
+    @media (orientation: portrait) {
+        font: var(--h1-portrait);
+    }
 }
 
 h2 {
     font: var(--h2);
     margin: 8px 0;
+    @media (orientation: portrait) {
+        font: var(--h2-portrait);
+    }
 }
 
 h3 {
     font: var(--h3);
     margin: 8px 0;
+    @media (orientation: portrait) {
+        font: var(--h3-portrait);
+    }
 }
 
 .btn {
@@ -96,5 +110,10 @@ h3 {
         transform: scale(1.05);
         background: var(--color-primary);
         color: var(--color-white);
+    }
+
+    @media (orientation: portrait) {
+        padding: var(--size-xs) var(--size-s);
+        font-size: var(--size-s);
     }
 }
