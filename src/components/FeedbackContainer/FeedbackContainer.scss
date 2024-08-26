@@ -8,7 +8,7 @@
     background: var(--color-white);
     color: var(--color-black);
     border-radius: var(--size-l);
-    align-items: center;
+    align-items: flex-start;
 
     .fading {
         animation: fadeInAnimate var(--duration-long);
@@ -66,6 +66,7 @@
         overflow: hidden;
         object-fit: cover;
         object-position: top;
+        margin: 5% 0;
     }
 
     &.portrait {
@@ -91,6 +92,7 @@
 
         .img {
             height: 35%;
+            margin: 0;
         }
     }
 }
