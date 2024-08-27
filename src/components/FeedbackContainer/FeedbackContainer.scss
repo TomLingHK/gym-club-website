@@ -9,6 +9,7 @@
     color: var(--color-black);
     border-radius: var(--size-l);
     align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
 
     .fading {
         animation: fadeInAnimate var(--duration-long);
