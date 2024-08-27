@@ -6,9 +6,9 @@ function FeatureContainer({ id, title, description }) {
             <div className='img'>
             </div>
             <div className='text'>
-                <h1 className='title'>
+                <h2 className='title'>
                     { title }
-                </h1>
+                </h2>
                 <div className='description'>
                     { description }
                 </div>

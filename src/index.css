@@ -42,6 +42,7 @@
     --duration-long: 700ms;
 
     background: var(--color-black);
+    font-family: var(--ff);
     user-select: none;
 }
 
@@ -101,19 +102,19 @@ h3 {
     border-radius: var(--size-s);
     border: 0.15rem solid var(--color-primary);
     transition-duration: var(--duration-normal);
-    background: var(--color-black);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-white);
     font-size: var(--size-m);
-    font-style: italic;
+    /* font-style: italic; */
 
     &:hover {
         transform: scale(1.07);
-        background: var(--color-primary);
-        color: var(--color-white);
+        background: var(--color-black);
+        color: var(--color-primary);
     }
 
     @media (orientation: portrait) {
         padding: var(--size-xs) var(--size-s);
-        font-size: var(--size-s);
+        font-size: var(--size-m);
     }
 }

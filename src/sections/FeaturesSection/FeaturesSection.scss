@@ -21,9 +21,9 @@
 
     .mainTitle {
         position: sticky;
-        top: 0;
+        top: 1rem;
         font-style: italic;
-        color: var(--color-primary);
+        color: var(--color-primary-light);
         z-index: 1;
         height: 6rem;
         line-height: 6rem;
@@ -40,9 +40,6 @@
         #featuresVideo {
             transform: translateX(33%);
         }
-    }
-
-    @media (orientation: portrait) {
         .featuresContainer {
             .featureContainer:nth-child(odd) {
                 flex-direction: column;
