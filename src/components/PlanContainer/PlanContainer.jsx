@@ -13,9 +13,9 @@ function PlanContainer({ title, price, description, item, activePlan, setActiveP
                     /month
                 </div>
             </div>
-            <div className='title'>
+            <h2 className='title'>
                 {title}
-            </div>
+            </h2>
             <div className='description'>
                 {description}
             </div>

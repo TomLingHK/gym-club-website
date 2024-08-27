@@ -30,7 +30,7 @@
         height: inherit;
         background: var(--color-grey-dark);
         border-radius: var(--spacing-s);
-        opacity: 0.9;
+        opacity: 0.93;
         .mainTitle {
             position: relative;
             padding-top: var(--size-xxl);
@@ -43,7 +43,7 @@
     
         .plansContainer {
             position: relative;
-            margin-top: var(--spacing-s);
+            margin-top: var(--size-xxl);
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -55,14 +55,14 @@
         padding-top: 5vh;
         padding-bottom: 5vh;
         .pricingContainer {
-            border-radius: var(--size-xl);
+            border-radius: var(--size-l);
             .mainTitle {
                 padding-top: 0;
             }
             .plansContainer {
                 margin-top: 0;
                 flex-direction: column;
-                height: 90%;
+                height: 89%;
                 align-items: center;
                 justify-content: space-between;
             }

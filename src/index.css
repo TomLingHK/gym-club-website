@@ -35,7 +35,7 @@
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
     --h1-portrait: bold 2.375rem / 2.65rem var(--ff);
-    --h2-portrait: bold 1.25rem / 1.25rem var(--ff);
+    --h2-portrait: bold 1.5rem / 1.65rem var(--ff);
     --h3-portrait: bold 1rem / 1.225rem var(--ff);
 
     --duration-normal: 500ms;
@@ -100,9 +100,9 @@ h3 {
     cursor: pointer;
     user-select: none;
     border-radius: var(--size-s);
-    border: 0.15rem solid var(--color-primary);
+    border: 0.15rem solid var(--color-primary-light);
     transition-duration: var(--duration-normal);
-    background: var(--color-primary);
+    background: var(--color-primary-light);
     color: var(--color-white);
     font-size: var(--size-m);
     /* font-style: italic; */
@@ -110,7 +110,7 @@ h3 {
     &:hover {
         transform: scale(1.07);
         background: var(--color-black);
-        color: var(--color-primary);
+        color: var(--color-primary-light);
     }
 
     @media (orientation: portrait) {

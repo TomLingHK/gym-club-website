@@ -9,7 +9,7 @@
     width: 240px;
     padding: var(--size-l);
     background: var(--color-grey-light);
-    border: 3px solid var(--color-black);
+    border: 3px solid var(--color-grey-light);
     border-radius: var(--size-m);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     transition-duration: var(--duration-normal);
@@ -17,11 +17,12 @@
     &.active {
         border: 3px solid var(--color-primary-light);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
-        background: linear-gradient(90deg, var(--color-grey-light) 0%, var(--color-grey-deepdark) 100%);
-        transform: scale(1.03);
+        background: linear-gradient(90deg, var(--color-grey-light) 30%, var(--color-grey-dark) 100%);
+        transform: scale(1.1);
+        opacity: 0.9;
 
         .btn {
-            background: var(--color-primary);
+            background: var(--color-primary-light);
             color: var(--color-white);
         }
     }
@@ -41,6 +42,7 @@
         .priceContainer,
         .title {
             background: linear-gradient(90deg, var(--color-gold) 25%, var(--color-orange) 50%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -50,6 +52,7 @@
         .priceContainer,
         .title {
             background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-blue) 50%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -57,9 +60,6 @@
 
     .title {
         color: var(--color-black);
-        font-size: var(--size-l);
-        line-height: var(--size-xl);
-        margin: var(--size-s) 0;
         font-weight: bold;
     }
 
@@ -71,15 +71,17 @@
     }
 
     .details {
-        font-style: italic;
         .item {
             margin: var(--size-xs) 0;
-            font-size: var(--size-m);
             .tickIcon {
-                color: var(--color-primary);
+                color: var(--color-primary-light);
                 display: inline-block;
+                font-size: var(--size-l);
+                line-height: var(--size-m);
             }
             .text {
+                font-size: var(--size-m);
+                line-height: var(--size-m);
                 color: var(--color-black);
                 margin-left: var(--size-xs);
                 display: inline-block;
@@ -103,9 +105,13 @@
     }
 
     @media (orientation: portrait) {
-        height: 28%;
-        width: 85%;
+        // height: 28%;
+        width: 82%;
         padding: var(--size-xs) var(--size-s);
+
+        &.active {
+            transform: scale(1.05);
+        }
 
         .priceContainer,
         .title {
@@ -125,7 +131,12 @@
             text-align: right;
         }
 
+        &.Basic {
+            height: 24%;
+        }
+
         &.Gold {
+            height: 28%;
             .title {
                 background: linear-gradient(90deg, gold 75%, rgb(255, 179, 3) 100%);
                 -webkit-background-clip: text;
@@ -134,6 +145,7 @@
         }
 
         &.Premium {
+            height: 34%;
             .title {
                 background: linear-gradient(90deg, var(--color-purple) 50%, var(--color-blue) 75%);
                 -webkit-background-clip: text;
@@ -151,7 +163,12 @@
             grid-template-columns: auto auto;
             .item {
                 margin: var(--size-xxs) 0;
-                font-size: var(--size-s);
+                .tickIcon {
+                    font-size: var(--size-m);
+                }
+                .text {
+                    font-size: var(--size-s);
+                }
             }
         }
 

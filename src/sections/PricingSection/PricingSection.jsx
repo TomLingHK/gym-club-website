@@ -19,7 +19,7 @@ function PricingSection() {
     const pricingInfo = [
         { title: 'Basic', price: '$19.9', description: 'Enjoy basic facilities including gym room, yoga room and sauna room!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room'] },
         { title: 'Gold', price: '$49.9', description: 'Enjoy more facilities with more privilege!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room', 'Mini golf centre', 'High priority queue'] },
-        { title: 'Premium', price: '$89.9', description: 'Enjoy all facilities with top privilege!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room', 'Mini golf centre', 'Sauna Room', 'Massaging Service', 'Highest priority queue', '24/7 Private Customer Support'] },
+        { title: 'Premium', price: '$89.9', description: 'Enjoy all facilities with top privilege!', item: ['Gym room', 'Yoga Room', 'Table tennis Room', 'Snooker Room', 'Mini golf centre', 'Sauna Room', 'Massaging Service', 'Highest priority queue', '24/7 Customer Support'] },
     ]
 
     return (
