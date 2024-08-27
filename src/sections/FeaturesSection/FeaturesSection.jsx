@@ -12,20 +12,20 @@ function FeaturesSection() {
         { id: 'feature1', title: 'Safety first', 
           description: `
             We provide professional trainers for every classes. Providing you a fruitful experience to learn in a correct manner. 
-            Not only a coach can help you to learn safely, but also help achieving your goal! Check out our talented 20+ coaches.
+            Not only a coach can help you to learn safely, but also help achieving your goal! Check out our talented coaches.
           ` 
         },
-        { id: 'feature2', title: 'Flexible schedule', 
-          description: `
-            There are at least three time slots for each class every week. Feel free to join any section every week. Arrange your time more effectively.
-            View schedule for individual classes by clicking More.
-          ` 
-        },
-        { id: 'feature3', title: '100+ classes', 
+        { id: 'feature2', title: '100+ classes', 
           description: `
             We provide 100+ classes from beginner to advanced level. Gym, yoga, HIIT and sports you have perhaps never heard of. 
             Check out the classes we provide categorized by work out, yoga, water sports and more!
           `
+        },
+        { id: 'feature3', title: 'Flexible schedule', 
+          description: `
+            There are at least three time slots for each class every week. Feel free to join any section every week. Arrange your time more effectively.
+            View schedule for individual classes by clicking More.
+          ` 
         },
     ];
 

@@ -107,7 +107,7 @@ h3 {
     font-style: italic;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.07);
         background: var(--color-primary);
         color: var(--color-white);
     }
