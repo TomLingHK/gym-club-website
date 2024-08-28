@@ -1,0 +1,44 @@
+.footer {
+    position: relative;
+    height: 20vh;
+    width: inherit;
+    background: var(--color-black-light);
+    padding: 3vh 23vw 7vh 17vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--color-white);
+
+    .logoContainer{
+        width: 22%;
+        border-right: 2px solid var(--color-white);
+
+        .logo {
+            padding: 0 var(--size-m);
+            height: var(--size-xxl);
+            width: var(--size-xxl);
+            margin-right: var(--size-xl);
+            color: var(--color-primary);
+            border-radius: var(--size-m);
+            background: var(--color-grey);
+        }
+        .description {
+            margin-top: var(--size-s);
+        }
+    }
+
+    .pagesContainer {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .page {
+            margin: var(--size-xs) 0;
+            cursor: pointer;
+            transition: color ease-in-out var(--duration-normal);
+            &:hover {
+                color: var(--color-primary-light);
+            }
+        }
+    }
+}

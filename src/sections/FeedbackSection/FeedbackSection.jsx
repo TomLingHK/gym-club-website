@@ -80,21 +80,23 @@ function FeedbackSection() {
     return (
         <section ref={ref} className={'feedbackSection scroll-checkpoint ' + orientation}>
             {inView && <img className='bg' src="./images/feedback_img.jpg" alt="beautiful_woods" />}
-            <h1 className='mainTitle'>User Reviews</h1>
-            <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
-            { orientation=='landscape' 
-            ?
-                <div className='feedbackThumbnailContainer'>
-                    {feedbackData.map((item, index) => 
-                        <FeedbackThumbnail key={index} index={index} curIndex={curIndex} setCurIndex={setCurIndex} id={item.id} />
-                    )}
-                </div>
-            :
-                <div className='arrowsContainer'>
-                    <FontAwesomeIcon icon={faArrowLeft} className={'arrowIcon arrowLeftIcon ' + (curIndex === firstItem ? 'inactive' : 'active')} onClick={leftArrowClick} />
-                    <FontAwesomeIcon icon={faArrowRight} className={'arrowIcon arrowRightIcon ' + (curIndex === lastItem ? 'inactive' : 'active')} onClick={rightArrowClick} />
-                </div>
-            }
+            <div className='mainContainer'>
+                <h1 className='mainTitle'>User Reviews</h1>
+                <FeedbackContainer highlightContent={ highlightContent } content={ content } person={ person } id={id} />
+                { orientation=='landscape' 
+                ?
+                    <div className='feedbackThumbnailContainer'>
+                        {feedbackData.map((item, index) => 
+                            <FeedbackThumbnail key={index} index={index} curIndex={curIndex} setCurIndex={setCurIndex} id={item.id} />
+                        )}
+                    </div>
+                :
+                    <div className='arrowsContainer'>
+                        <FontAwesomeIcon icon={faArrowLeft} className={'arrowIcon arrowLeftIcon ' + (curIndex === firstItem ? 'inactive' : 'active')} onClick={leftArrowClick} />
+                        <FontAwesomeIcon icon={faArrowRight} className={'arrowIcon arrowRightIcon ' + (curIndex === lastItem ? 'inactive' : 'active')} onClick={rightArrowClick} />
+                    </div>
+                }
+            </div>
 
         </section>
     )
