@@ -76,6 +76,7 @@ h1 {
 
     @media (orientation: portrait) {
         font: var(--h1-portrait);
+        margin: 3px 0;
     }
 }
 
@@ -84,6 +85,7 @@ h2 {
     margin: 8px 0;
     @media (orientation: portrait) {
         font: var(--h2-portrait);
+        margin: 6px 0;
     }
 }
 
@@ -92,6 +94,7 @@ h3 {
     margin: 8px 0;
     @media (orientation: portrait) {
         font: var(--h3-portrait);
+        margin: 6px 0;
     }
 }
 

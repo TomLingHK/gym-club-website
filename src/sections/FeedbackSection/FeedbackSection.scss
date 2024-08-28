@@ -35,6 +35,9 @@
     &.portrait {
         padding: 4vh 2vh;
         border-radius: var(--size-l);
+        .mainTitle {
+            margin-bottom: min(12px, var(--size-xl));
+        }
         .arrowsContainer {
             margin-top: var(--size-xs);
             .arrowIcon {

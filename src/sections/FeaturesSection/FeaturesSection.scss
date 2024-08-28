@@ -40,6 +40,9 @@
         #featuresVideo {
             transform: translateX(33%);
         }
+        .mainTitle {
+            top: 0;
+        }
         .featuresContainer {
             .featureContainer:nth-child(odd) {
                 flex-direction: column;

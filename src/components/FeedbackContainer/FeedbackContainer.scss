@@ -75,7 +75,7 @@
         flex-direction: column-reverse;
         height: 80%;
         padding: var(--size-s);
-        justify-content: flex-end;
+        justify-content: space-between;
 
         .txt,
         .img {
@@ -86,9 +86,11 @@
             height: 60%;
             margin: 0;
             .content {
-                font-size: var(--size-s);
+                font-size: 0.7rem;
+                line-height: 1.5rem;
             }
             .name {
+                font-size: var(--size-s);
                 margin-top: var(--size-xs);
             }
         }
