@@ -53,7 +53,7 @@
         }
     }
 
-    @media (orientation: portrait) {
+    &.portrait {
         flex-direction: column;
         padding: 12vh 0 7vh;
 

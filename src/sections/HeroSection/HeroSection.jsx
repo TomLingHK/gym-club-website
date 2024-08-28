@@ -1,8 +1,10 @@
 import './HeroSection.scss';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+import OrientationContext from '../../store/orientationContext';
 
 function HeroSection() {
+    const orientation = useContext(OrientationContext);
     const { ref, inView } = useInView({
         threshold: 0.28,
     });
@@ -14,7 +16,7 @@ function HeroSection() {
     }, [inView])
 
     return (
-        <section ref={ref} className={'heroSection scroll-checkpoint ' + (inView ? 'active' : '')}>
+        <section ref={ref} className={`heroSection scroll-checkpoint ${orientation} ` + (inView ? 'active' : '')}>
             <video autoPlay muted loop id="heroVideo">
                 <source src="./videos/hero_bg_vid.mp4" type="video/mp4" />
             </video>

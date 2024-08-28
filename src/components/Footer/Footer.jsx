@@ -1,8 +1,12 @@
 import './Footer.scss';
+import { useContext } from 'react';
+import OrientationContext from '../../store/orientationContext';
 
 function Footer() {
+    const orientation = useContext(OrientationContext);
+
     return (
-        <div className={'footer'}>
+        <div className={`footer ${orientation}`}>
             <div className='logoContainer'>
                 <div className='logo'>logo</div>
                 <div className='description'>

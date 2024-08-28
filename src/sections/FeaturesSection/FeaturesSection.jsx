@@ -1,10 +1,12 @@
 import './FeaturesSection.scss'
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+import OrientationContext from '../../store/orientationContext';
 
 import FeatureContainer from '../../components/FeatureContainer/FeatureContainer';
 
 function FeaturesSection() {
+  const orientation = useContext(OrientationContext);
     const { ref, inView } = useInView({
         threshold: 0.28,
     });
@@ -37,7 +39,7 @@ function FeaturesSection() {
 
 
     return (
-        <section ref={ref} className={'featuresSection ' + (inView ? 'active' : '')}>
+        <section ref={ref} className={`featuresSection ${orientation} ` + (inView ? 'active' : '')}>
             <video autoPlay muted loop id="featuresVideo">
                 <source src="./videos/features_bg_vid.mp4" type="video/mp4" />
             </video>

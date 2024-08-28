@@ -1,11 +1,13 @@
 import './PricingSection.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+import OrientationContext from '../../store/orientationContext';
 
 import PlanContainer from '../../components/PlanContainer/PlanContainer';
 
 function PricingSection() {
     const [activePlan, setActivePlan] = useState('Premium');
+    const orientation = useContext(OrientationContext);
     const { ref, inView } = useInView({
         threshold: 0.28,
     });
@@ -23,7 +25,7 @@ function PricingSection() {
     ]
 
     return (
-        <section ref={ref} className={'pricingSection scroll-checkpoint ' + (inView ? 'active' : '')}>
+        <section ref={ref} className={`pricingSection scroll-checkpoint ${orientation} ` + (inView ? 'active' : '')}>
             <video autoPlay muted loop id="pricingVideo">
                 <source src="./videos/pricing_bg_vid.mp4" type="video/mp4" />
             </video>

@@ -1,6 +1,6 @@
+import './FeedbackSection.scss';
 import { useState, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
-import './FeedbackSection.scss';
 import OrientationContext from '../../store/orientationContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -78,7 +78,7 @@ function FeedbackSection() {
     }
 
     return (
-        <section ref={ref} className={'feedbackSection scroll-checkpoint ' + orientation}>
+        <section ref={ref} className={`feedbackSection scroll-checkpoint ${orientation}`}>
             {inView && <img className='bg' src="./images/feedback_img.jpg" alt="beautiful_woods" />}
             <div className='mainContainer'>
                 <h1 className='mainTitle'>User Reviews</h1>

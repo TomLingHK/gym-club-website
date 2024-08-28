@@ -8,7 +8,7 @@ function PlanContainer({ title, price, description, item, activePlan, setActiveP
     const orientation = useContext(OrientationContext);
 
     return (
-        <div className={'planContainer ' + (activePlan == title ? 'active ' : '') + title} onMouseEnter={ () => setActivePlan(title) }>
+        <div className={`planContainer ${orientation} ` + (activePlan == title ? 'active ' : '') + title} onMouseEnter={ () => setActivePlan(title) }>
             <div className='priceContainer'>
                 <h2 className='price'>
                     {price}

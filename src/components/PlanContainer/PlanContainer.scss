@@ -105,7 +105,7 @@
         }
     }
 
-    @media (orientation: portrait) {
+    &.portrait {
         // height: 28%;
         width: 82%;
         padding: 0 var(--size-xs) var(--size-xxs);

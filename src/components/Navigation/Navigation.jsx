@@ -1,6 +1,6 @@
+import './Navigation.scss';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Navigation.scss';
 import OrientationContext from '../../store/orientationContext';
 
 function Navigation() {
@@ -19,7 +19,7 @@ function Navigation() {
     }
 
     return (
-        <div className={'navBar ' + orientation}>
+        <div className={`navBar ${orientation}`}>
             <div className='logo'>
                 Logo
             </div>
