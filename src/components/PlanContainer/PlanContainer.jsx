@@ -1,8 +1,12 @@
 import './PlanContainer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import OrientationContext from '../../store/orientationContext';
 
 function PlanContainer({ title, price, description, item, activePlan, setActivePlan }) {
+    const orientation = useContext(OrientationContext);
+
     return (
         <div className={'planContainer ' + (activePlan == title ? 'active ' : '') + title} onMouseEnter={ () => setActivePlan(title) }>
             <div className='priceContainer'>
@@ -32,7 +36,7 @@ function PlanContainer({ title, price, description, item, activePlan, setActiveP
                 })}
             </div>
             <div className='btn selectPlanBtn'>
-                Select plan
+                { orientation=='landscape' ? 'Select plan' : 'Select' }
             </div>
         </div>
     )
