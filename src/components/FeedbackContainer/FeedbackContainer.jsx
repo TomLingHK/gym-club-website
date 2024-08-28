@@ -24,9 +24,16 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     <h1 className='openQuotationMark'>
                         “
                     </h1>
-                    <h2 className={'highlightContent' + (fading ? ' fading' : '')}>
-                        { highlightContent }
-                    </h2>
+                    { orientation === 'landscape'
+                    ?
+                        <h2 className={'highlightContent' + (fading ? ' fading' : '')}>
+                            { highlightContent }
+                        </h2>
+                    :
+                        <h3 className={'highlightContent' + (fading ? ' fading' : '')}>
+                            { highlightContent }
+                        </h3>
+                    }
                     <h1 className='closeQuotationMark'>
                         ”
                     </h1>

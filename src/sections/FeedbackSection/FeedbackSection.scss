@@ -34,16 +34,24 @@
 
     &.portrait {
         padding: 4vh 2vh;
+        border-radius: var(--size-l);
         .arrowsContainer {
+            margin-top: var(--size-xs);
             .arrowIcon {
                 margin: var(--size-s);
-                height: var(--size-xl);
-                width: var(--size-xl);
+                height: var(--size-l);
+                width: var(--size-l);
+                padding: var(--size-xs);
                 border: 2px solid var(--color-white);
                 border-radius: 50%;
+                transition: opacity ease-in-out var(--duration-normal);
+
+                &.arrowLeftIcon {
+                    margin-left: 0;
+                }
 
                 &.inactive {
-                    opacity: 0.5;
+                    opacity: 0.3;
                 }
             }
         }

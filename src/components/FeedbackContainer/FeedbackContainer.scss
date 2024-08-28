@@ -75,6 +75,7 @@
         flex-direction: column-reverse;
         height: 80%;
         padding: var(--size-s);
+        justify-content: flex-end;
 
         .txt,
         .img {
