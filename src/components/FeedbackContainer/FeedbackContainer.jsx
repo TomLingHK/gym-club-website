@@ -14,7 +14,7 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
 
         timeoutID = setTimeout(() => {
             setFading(false);
-        }, 1000);
+        }, 500);
     }, [id])
 
     return (
@@ -24,9 +24,9 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     <h1 className='openQuotationMark'>
                         “
                     </h1>
-                    <h3 className={'highlightContent' + (fading ? ' fading' : '')}>
+                    <h2 className={'highlightContent' + (fading ? ' fading' : '')}>
                         { highlightContent }
-                    </h3>
+                    </h2>
                     <h1 className='closeQuotationMark'>
                         ”
                     </h1>
@@ -35,7 +35,7 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     { content }
                 </div>
                 <div className={'name ' + (fading ? 'fading' : '')}>
-                    - { person }
+                    { person }
                 </div>
             </div>
             <img src={`./images/people/${id}_img.jpg`} alt="Happy person" className={'img ' + (fading ? 'fading' : '')} />

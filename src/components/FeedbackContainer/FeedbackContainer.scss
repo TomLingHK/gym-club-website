@@ -5,14 +5,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background: var(--color-white);
+    background: linear-gradient(90deg, var(--color-black-light) 10%, var(--color-grey-dark) 100%);
     color: var(--color-black);
     border-radius: var(--size-l);
     align-items: flex-start;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
 
     .fading {
-        animation: fadeInAnimate var(--duration-long);
+        animation: fadeInAnimate var(--duration-normal);
     }
 
     @keyframes fadeInAnimate {
@@ -30,7 +30,7 @@
         .highlightContainer {
             .openQuotationMark,
             .closeQuotationMark {
-                color: var(--color-primary-dark);
+                color: var(--color-primary-light);
             }
             .openQuotationMark {
                 text-align: left;
@@ -39,19 +39,20 @@
                 text-align: center;
                 font-style: italic;
                 font-weight: bold;
-                color: var(--color-primary);
+                color: var(--color-primary-light);
+                text-wrap: nowrap;
             }
             .closeQuotationMark {
                 text-align: right;
             }
         }
         .content {
-            color: var(--color-primary-dark);
+            color: var(--color-primary);
             font-size: var(--size-m);
             line-height: var(--size-xl);
         }
         .name {
-            color: var(--color-primary);
+            color: var(--color-primary-light);
             margin-top: var(--size-m);
             font-size: var(--size-m);
             line-height: var(--size-xl);

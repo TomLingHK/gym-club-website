@@ -86,7 +86,7 @@ function FeedbackSection() {
             ?
                 <div className='feedbackThumbnailContainer'>
                     {feedbackData.map((item, index) => 
-                        <FeedbackThumbnail key={index} index={index} setCurIndex={setCurIndex} id={item.id} />
+                        <FeedbackThumbnail key={index} index={index} curIndex={curIndex} setCurIndex={setCurIndex} id={item.id} />
                     )}
                 </div>
             :

@@ -12,6 +12,10 @@
         opacity: 0.8;
     }
 
+    &.active {
+        border: 2px solid var(--color-primary);
+    }
+
     .img {
         position: relative;
         height: 100%;

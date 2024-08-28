@@ -13,7 +13,7 @@
         top: 0;
         min-width: 100%;
         min-height: 100%;
-        opacity: .5;
+        opacity: .3;
         z-index: -1;
     }
 
@@ -28,7 +28,7 @@
         height: var(--spacing-m);
         display: flex;
         flex-direction: row;
-        margin-top: var(--size-xl);
+        margin-top: var(--spacing-s);
         justify-content: space-evenly;
     }
 
