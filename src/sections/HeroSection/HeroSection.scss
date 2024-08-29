@@ -43,7 +43,7 @@
         width: 50%;
         text-align: left;
         margin: 5%;
-        padding: var(--spacing-s) 0;
+        padding: var(--spacing-m) 0;
 
         .description {
             margin-top: var(--size-s);
@@ -51,8 +51,9 @@
         }
 
         .exploreBtn {
-            position: absolute;
-            bottom: 0;
+            position: relative;
+            width: max-content;
+            margin-top: var(--size-xxl);
         }
     }
 

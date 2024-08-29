@@ -1,9 +1,19 @@
 import './Footer.scss';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import OrientationContext from '../../store/orientationContext';
 
 function Footer() {
     const orientation = useContext(OrientationContext);
+    const navigate = useNavigate();
+
+    function onPageClick($item) {
+        switch ($item) {
+            case "aboutUs": navigate('/aboutUs'); break;
+            case "popularClasses": navigate('/classes'); break;
+            default: console.warn('Navigation mapping error, item: ', $item);
+        }
+    }
 
     return (
         <div className={`footer ${orientation}`}>
@@ -18,7 +28,7 @@ function Footer() {
                     <h3 className='category'>
                         HKGC
                     </h3>
-                    <div className='page'>
+                    <div className='page aboutUs' onClick={() => onPageClick('aboutUs')} >
                         About Us
                     </div>
                     <div className='page'>
@@ -29,7 +39,7 @@ function Footer() {
                     <h3 className='category'>
                         Our Classes
                     </h3>
-                    <div className='page'>
+                    <div className='page popularClasses' onClick={() => onPageClick('popularClasses')} >
                         Most Popular
                     </div>
                     <div className='page'>

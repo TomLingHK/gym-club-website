@@ -41,13 +41,13 @@
             transition-duration: var(--duration-normal);
 
             &.active {
-                color: var(--color-primary);
+                color: var(--color-primary-light);
                 font-weight: bold;
                 text-decoration: underline;
             }
 
             &:hover {
-                background: var(--color-primary);
+                background: var(--color-primary-light);
                 color: var(--color-black);
             }
         }
