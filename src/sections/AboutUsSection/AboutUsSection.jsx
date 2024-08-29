@@ -1,28 +1,27 @@
+import './AboutUsSection.scss';
 import { useState } from 'react';
-import './AboutUsSection.scss'
+
+import Menu from '../../components/Menu/Menu';
 
 function AboutUsSection() {
-    const [activeItem, setActiveItem] = useState('aboutUs');
+    const [activeMenu, setActiveMenu] = useState('aboutUs');
+    const menuData = {
+        mainTitle: "HKGC",
+        menuItem: [
+            { key: 'aboutUs', text: 'About Us' },
+            { key: 'contactUs', text: 'Contact Us' },
+        ]
+    }
 
     return (
         <div className='aboutUsSection'>
             <div className='img'>
             </div>
             <div className='aboutUsContainer'>
-                <div className='menu'>
-                    <h3 className='mainTitle'>
-                        HKGC
-                    </h3>
-                    <div className='item aboutUs' onClick={ () => setActiveItem('aboutUs')} >
-                        About Us
-                    </div>
-                    <div className='item contactUs' onClick={ () => setActiveItem('contactUs')} >
-                        Contact Us
-                    </div>
-                </div>
+                <Menu menuData={menuData} setActiveMenu={setActiveMenu} />
                 <div className='content'>
-                    { activeItem === 'aboutUs' && <div>About Us content</div>}
-                    { activeItem === 'contactUs' && <div>Contact Us content</div>}
+                    { activeMenu === 'aboutUs' && <div>About Us content</div>}
+                    { activeMenu === 'contactUs' && <div>Contact Us content</div>}
                 </div>
             </div>
         </div>

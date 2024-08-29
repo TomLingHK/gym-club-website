@@ -12,16 +12,7 @@
         justify-content: center;
         height: 70vh;
         width: 100%;
-        .menu {
-            background: var(--color-black-light);
-            color: var(--color-white);
-            width: 15%;
-            padding: 1%;
-            .item {
-                cursor: pointer;
-                width: max-content;
-            }
-        }
+
         .content {
             background: var(--color-grey-dark);
             color: var(--color-white);
