@@ -1,12 +1,13 @@
 import './Navigation.scss';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import OrientationContext from '../../store/orientationContext';
 
 function Navigation() {
-    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
+    const [active, setActive] = useState('Home')
     const orientation = useContext(OrientationContext);
     const navigate = useNavigate();
+    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
 
     function onNavClick($item) {
         switch ($item) {
@@ -16,6 +17,7 @@ function Navigation() {
             case "HKGC": navigate('/aboutUs'); break;
             default: console.warn('Navigation mapping error, item: ', $item);
         }
+        setActive($item);
     }
 
     return (
@@ -26,7 +28,7 @@ function Navigation() {
             {orientation=='landscape' &&
             <div className='navContainer'>
                 {navItems.map(item => 
-                    <div className='navItem' key={item} onClick={ () => onNavClick(item) }>{item}</div> 
+                    <div className={'navItem ' + (item === active ? 'active' : '')} key={item} onClick={ () => onNavClick(item) }>{item}</div> 
                 )}
             </div>
             }

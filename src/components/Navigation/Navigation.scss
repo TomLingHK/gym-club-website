@@ -40,8 +40,15 @@
             border-radius: var(--size-xl);
             transition-duration: var(--duration-normal);
 
+            &.active {
+                color: var(--color-primary);
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
             &:hover {
                 background: var(--color-primary);
+                color: var(--color-black);
             }
         }
     }
