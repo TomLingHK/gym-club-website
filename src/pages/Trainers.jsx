@@ -1,8 +1,10 @@
-import React from 'react'
+import TrainerSection from "../sections/TrainerSection/TrainerSection";
 
 function Trainers() {
     return (
-        <div>Trainers</div>
+        <div>
+            <TrainerSection/>
+        </div>
     )
 }
 

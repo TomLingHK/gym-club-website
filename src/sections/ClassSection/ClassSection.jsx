@@ -21,9 +21,9 @@ function ClassSection() {
             <div className='classContainer'>
                 <Menu menuData={menuData} setActiveMenu={setActiveMenu} />
                 <div className='content'>
-                    { activeMenu === 'popular' && <div>Most Popular</div>}
-                    { activeMenu === 'gym' && <div>Gym</div>}
-                    { activeMenu === 'yoga' && <div>Yoga</div>}
+                    { activeMenu === 'popular' && <div>Most Popular content</div>}
+                    { activeMenu === 'gym' && <div>Gym content</div>}
+                    { activeMenu === 'yoga' && <div>Yoga content</div>}
                 </div>
             </div>
         </div>
