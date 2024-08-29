@@ -1,8 +1,10 @@
-import React from 'react'
+import ClassSection from "../sections/ClassSection/ClassSection";
 
 function Classes() {
     return (
-        <div>Classes</div>
+        <div>
+            <ClassSection/>
+        </div>
     )
 }
 
