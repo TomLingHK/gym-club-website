@@ -17,6 +17,10 @@
             color: var(--color-white);
             width: 15%;
             padding: 1%;
+            .item {
+                cursor: pointer;
+                width: max-content;
+            }
         }
         .content {
             background: var(--color-grey-dark);
