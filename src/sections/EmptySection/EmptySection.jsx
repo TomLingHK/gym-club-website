@@ -1,12 +1,10 @@
 import './EmptySection.scss';
-import Footer from '../../components/Footer/Footer';
 
-function EmptySection({ setActiveNav }) {
+function EmptySection() {
     return (
         <>
             <section className={'emptySection scroll-checkpoint'}>
             </section>
-            <Footer setActiveNav={setActiveNav}></Footer>
         </>
     )
 }

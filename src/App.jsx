@@ -10,6 +10,7 @@ import Classes from './pages/Classes';
 import { useState, useEffect } from 'react';
 
 import OrientationContext from './store/orientationContext';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	const [orientation, setOrientation] = useState(undefined);
@@ -36,11 +37,12 @@ function App() {
 		<OrientationContext.Provider value={orientation}>
 			<Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
 			<Routes>
-				<Route path='/home' element={<Home setActiveNav={setActiveNav} />}/>
+				<Route path='/home' element={<Home/>}/>
 				<Route path='/classes' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
 				<Route path='/aboutUs' element={<AboutUs/>}/>
 			</Routes>
+            <Footer setActiveNav={setActiveNav} />
 		</OrientationContext.Provider>
 	)
 }

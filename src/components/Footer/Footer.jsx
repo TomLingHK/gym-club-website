@@ -20,6 +20,7 @@ function Footer({ setActiveNav }) {
         if (_target !== '') {
             navigate(`/${_target}`);
             setActiveNav(_target);
+            window.scrollTo(0, 0);
         }
     }
 
