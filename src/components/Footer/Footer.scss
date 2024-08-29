@@ -33,11 +33,53 @@
         flex-direction: row;
         justify-content: space-evenly;
         .page {
-            margin: var(--size-xs) 0;
+            margin: var(--size-xxs) 0;
             cursor: pointer;
-            transition: color ease-in-out var(--duration-normal);
+            transition: color ease-in-out var(--duration-fast);
             &:hover {
                 color: var(--color-primary-light);
+            }
+        }
+    }
+
+    &.portrait {
+        height: 45vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: unset;
+        padding: 1.5vh 12vw 1.5vh 12vw;
+
+        .logoContainer{
+            width: 100%;
+            border-right: unset;
+            border-bottom: 2px solid var(--color-white);
+
+            .logo {
+                margin: 0 auto;
+            }
+            .description {
+                margin-bottom: var(--size-s);
+            }
+        }
+        .pagesContainer {
+            width: 100%;
+            flex-direction: column;
+            .pageContainer {
+                margin: var(--size-xs);
+                .page {
+                    font-size: var(--size-s);
+                }
+            }
+        }
+
+        @media screen and (max-height: 810px){
+            .pagesContainer {
+                .pageContainer {
+                    margin: var(--size-xxs);
+                    .page {
+                        margin: var(--size-xxs) 0;
+                    }
+                }
             }
         }
     }

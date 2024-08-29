@@ -38,6 +38,7 @@
     --h2-portrait: bold 1.5rem / 1.65rem var(--ff);
     --h3-portrait: bold 1rem / 1.225rem var(--ff);
 
+    --duration-fast: 300ms;
     --duration-normal: 500ms;
     --duration-long: 700ms;
 
@@ -94,7 +95,7 @@ h3 {
     margin: 8px 0;
     @media (orientation: portrait) {
         font: var(--h3-portrait);
-        margin: 6px 0;
+        margin: 4px 0;
     }
 }
 
