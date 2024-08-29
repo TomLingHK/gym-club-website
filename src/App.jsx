@@ -1,5 +1,7 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import OrientationContext from './store/orientationContext';
 
 // components
 import Navigation from './components/Navigation/Navigation';
@@ -7,9 +9,6 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Trainers from './pages/Trainers';
 import Classes from './pages/Classes';
-import { useState, useEffect } from 'react';
-
-import OrientationContext from './store/orientationContext';
 import Footer from './components/Footer/Footer';
 
 function App() {
