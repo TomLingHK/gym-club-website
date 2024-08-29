@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 
+// components
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -12,6 +13,7 @@ import OrientationContext from './store/orientationContext';
 
 function App() {
 	const [orientation, setOrientation] = useState(undefined);
+    const [activeNav, setActiveNav] = useState('Home');
 
     useEffect(() => {
         window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
@@ -32,9 +34,9 @@ function App() {
 
 	return (
 		<OrientationContext.Provider value={orientation}>
-			<Navigation/>
+			<Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
 			<Routes>
-				<Route path='/' element={<Home/>}/>
+				<Route path='/home' element={<Home setActiveNav={setActiveNav} />}/>
 				<Route path='/classes' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
 				<Route path='/aboutUs' element={<AboutUs/>}/>

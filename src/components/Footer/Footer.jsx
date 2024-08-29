@@ -3,15 +3,23 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import OrientationContext from '../../store/orientationContext';
 
-function Footer() {
+function Footer({ setActiveNav }) {
     const orientation = useContext(OrientationContext);
     const navigate = useNavigate();
 
     function onPageClick($item) {
+        let _target = '';
+
         switch ($item) {
-            case "aboutUs": navigate('/aboutUs'); break;
-            case "popularClasses": navigate('/classes'); break;
+            case "aboutUs": _target = 'aboutUs'; break;
+            case "popularClasses": _target = 'classes'; break;
+            case "ambassador": _target = 'trainers'; break;
             default: console.warn('Navigation mapping error, item: ', $item);
+        }
+
+        if (_target !== '') {
+            navigate(`/${_target}`);
+            setActiveNav(_target);
         }
     }
 
@@ -53,7 +61,7 @@ function Footer() {
                     <h3 className='category'>
                         Our Trainers
                     </h3>
-                    <div className='page'>
+                    <div className='page ambassador' onClick={() => onPageClick('ambassador')} >
                         Brand Ambassador
                     </div>
                     <div className='page'>

@@ -1,23 +1,34 @@
 import './Navigation.scss';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import OrientationContext from '../../store/orientationContext';
 
-function Navigation() {
-    const [active, setActive] = useState('Home')
+function Navigation({ activeNav, setActiveNav }) {
     const orientation = useContext(OrientationContext);
     const navigate = useNavigate();
-    const navItems = ['Home', 'Our Classes', 'Our Trainers', "HKGC"];
+
+    const navItems = [
+        { key: 'home', text: 'Home' },
+        { key: 'classes', text: 'Our Classes' },
+        { key: 'trainers', text: 'Our Trainers' },
+        { key: 'aboutUs', text: 'HKGC' },
+    ];
 
     function onNavClick($item) {
+        let _target = '';
+
         switch ($item) {
-            case "Home": navigate('/'); break;
-            case "Our Classes": navigate('/classes'); break;
-            case "Our Trainers": navigate('/trainers'); break;
-            case "HKGC": navigate('/aboutUs'); break;
+            case "home":  _target = 'home'; break;
+            case "classes":  _target = 'classes'; break;
+            case "trainers": _target = 'trainers'; break;
+            case "aboutUs": _target = 'aboutUs'; break;
             default: console.warn('Navigation mapping error, item: ', $item);
         }
-        setActive($item);
+
+        if (_target !== '') {
+            navigate(`/${_target}`);
+            setActiveNav(_target);
+        }
     }
 
     return (
@@ -25,12 +36,12 @@ function Navigation() {
             <div className='logo'>
                 Logo
             </div>
-            {orientation=='landscape' &&
-            <div className='navContainer'>
-                {navItems.map(item => 
-                    <div className={'navItem ' + (item === active ? 'active' : '')} key={item} onClick={ () => onNavClick(item) }>{item}</div> 
-                )}
-            </div>
+            { orientation=='landscape' &&
+                <div className='navContainer'>
+                    {navItems.map(item => 
+                        <div className={'navItem ' + (item.key === activeNav ? 'active' : '')} key={item.key} onClick={ () => onNavClick(item.key) }>{item.text}</div> 
+                    )}
+                </div>
             }
         </div>
     )
