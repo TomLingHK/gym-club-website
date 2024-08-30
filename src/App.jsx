@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import OrientationContext from './store/orientationContext';
 
@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
 	const [orientation, setOrientation] = useState(undefined);
-    const [activeNav, setActiveNav] = useState('Home');
+    const [activeNav, setActiveNav] = useState('home');
 
     useEffect(() => {
         window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
@@ -23,7 +23,6 @@ function App() {
                 setOrientation('portrait');
             } else {
                 setOrientation('landscape');
-                
             }
         });
 
@@ -36,6 +35,7 @@ function App() {
 		<OrientationContext.Provider value={orientation}>
 			<Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
 			<Routes>
+                <Route path="/" element={<Navigate to="/home" />}/>
 				<Route path='/home' element={<Home/>}/>
 				<Route path='/classes' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
