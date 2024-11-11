@@ -2,6 +2,9 @@ import './ClassSection.scss';
 import { useState } from 'react';
 
 import Menu from '../../components/Menu/Menu';
+import PopularClasses from './PopularClasses/PopularClasses';
+import GymClasses from './GymClasses/GymClasses';
+import YogaClasses from './YogaClasses/YogaClasses';
 
 function ClassSection() {
     const [activeMenu, setActiveMenu] = useState('popular');
@@ -21,9 +24,9 @@ function ClassSection() {
             <div className='classContainer'>
                 <Menu menuData={menuData} setActiveMenu={setActiveMenu} />
                 <div className='content'>
-                    { activeMenu === 'popular' && <div>Most Popular content</div>}
-                    { activeMenu === 'gym' && <div>Gym content</div>}
-                    { activeMenu === 'yoga' && <div>Yoga content</div>}
+                    { activeMenu === 'popular' && <PopularClasses/> }
+                    { activeMenu === 'gym' && <GymClasses/> }
+                    { activeMenu === 'yoga' && <YogaClasses/> }
                 </div>
             </div>
         </div>
