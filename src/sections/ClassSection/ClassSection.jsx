@@ -21,7 +21,7 @@ function ClassSection() {
         <div className='classSection'>
             <div className='img'>
             </div>
-            <div className='classContainer'>
+            <div className='classesContainer'>
                 <Menu menuData={menuData} setActiveMenu={setActiveMenu} />
                 <div className='content'>
                     { activeMenu === 'popular' && <PopularClasses/> }
