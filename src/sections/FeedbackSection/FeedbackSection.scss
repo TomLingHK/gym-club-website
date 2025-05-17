@@ -29,7 +29,7 @@
             height: var(--spacing-m);
             display: flex;
             flex-direction: row;
-            margin-top: var(--spacing-s);
+            margin-top: var(--spacing-xs);
             justify-content: space-evenly;
         }
     }
@@ -39,10 +39,10 @@
             padding: 4vh 2vh;
             border-radius: var(--size-l);
             .mainTitle {
-                margin-bottom: min(12px, var(--size-xl));
+                margin-bottom: min(6px, var(--size-xl));
             }
             .arrowsContainer {
-                margin-top: var(--size-xs);
+                margin-top: var(--size-xxs);
                 .arrowIcon {
                     margin: var(--size-s);
                     height: var(--size-l);

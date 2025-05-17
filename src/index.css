@@ -9,6 +9,7 @@
     --size-xl: 1.75rem;
     --size-xxl: 2.5rem;
 
+    --spacing-xs: 2.75rem;
     --spacing-s: 3.75rem;
     --spacing-m: 6.25rem;
     --spacing-l: 10rem;
@@ -21,7 +22,7 @@
     --color-grey: #7c7c7c;
     --color-grey-dark: #5f5f5f;
     --color-grey-deepdark: #414141;
-    --color-grey-light: #8c8c8c;
+    --color-grey-light: #cecece;
     --color-white: #ffffff;
     --color-white-dark: #cdcdcd;
     --color-primary: rgb(210, 38, 38);
@@ -34,7 +35,7 @@
     --h2: bold 2.25rem / 2.25rem var(--ff);
     --h3: bold 1.5rem / 1.875rem var(--ff);
 
-    --h1-portrait: bold 2.375rem / 2.65rem var(--ff);
+    --h1-portrait: bold 2rem / 2.2rem var(--ff);
     --h2-portrait: bold 1.5rem / 1.65rem var(--ff);
     --h3-portrait: bold 1rem / 1.225rem var(--ff);
 
@@ -68,7 +69,7 @@ section {
     }
 
     @media (orientation: landscape) and (max-width: 1750px) {
-        margin: 0 var(--spacing-xl);
+        margin: 0 var(--spacing-l);
     }
 }
 

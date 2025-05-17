@@ -1,7 +1,7 @@
 
 .feedbackContainer {
     position: relative;
-    height: 65%;
+    height: 68%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -25,8 +25,12 @@
     }
 
     .txt {
+        display: flex;
+        flex-direction: column;
         width: 50%;
-        margin: 5% 0;
+        height: 100%;
+        justify-content: center;
+
         .highlightContainer {
             .openQuotationMark,
             .closeQuotationMark {
@@ -40,19 +44,19 @@
                 font-style: italic;
                 font-weight: bold;
                 color: var(--color-primary-light);
-                text-wrap: nowrap;
+                text-wrap: auto;
             }
             .closeQuotationMark {
                 text-align: right;
             }
         }
         .content {
-            color: var(--color-primary);
+            color: var(--color-white);
             font-size: var(--size-m);
             line-height: var(--size-xl);
         }
         .name {
-            color: var(--color-primary-light);
+            color: var(--color-white);
             margin-top: var(--size-m);
             font-size: var(--size-m);
             line-height: var(--size-xl);
@@ -60,15 +64,21 @@
         }
     }
 
-    .img {
-        position: relative;
-        height: 80%;
+    .imgContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
         width: 40%;
-        border-radius: var(--size-l);
-        overflow: hidden;
-        object-fit: cover;
-        object-position: top;
-        margin: 5% 0;
+
+        .img {
+            position: relative;
+            height: 80%;
+            border-radius: var(--size-l);
+            overflow: hidden;
+            object-fit: cover;
+            object-position: top;
+        }
     }
 
     &.portrait {
@@ -85,9 +95,11 @@
         .txt {
             height: 60%;
             margin: 0;
+            justify-content: flex-start;
+
             .content {
                 font-size: 0.7rem;
-                line-height: 1.5rem;
+                line-height: 1.3rem;
             }
             .name {
                 font-size: var(--size-s);
@@ -95,9 +107,17 @@
             }
         }
 
-        .img {
-            height: 35%;
-            margin: 0;
+        
+        .imgContainer {
+            flex-direction: column;
+            justify-content: center;
+            height: 40%;
+            width: 100%;
+
+            .img {
+                height: 100%;
+                margin: 0;
+            }
         }
     }
 }

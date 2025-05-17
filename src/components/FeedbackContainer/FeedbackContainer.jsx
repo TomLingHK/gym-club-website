@@ -24,15 +24,15 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     { orientation === 'landscape'
                     ?
                     <>
-                        <h1 className='openQuotationMark'>
+                        <h2 className='openQuotationMark'>
                             “
-                        </h1>
+                        </h2>
                         <h2 className={'highlightContent' + (fading ? ' fading' : '')}>
                             { highlightContent }
                         </h2>
-                        <h1 className='closeQuotationMark'>
+                        <h2 className='closeQuotationMark'>
                             ”
-                        </h1>
+                        </h2>
                     </>
                     :
                     
@@ -56,7 +56,9 @@ function FeedbackContainer({ highlightContent, content, person, id }) {
                     { person }
                 </div>
             </div>
-            <img src={`./images/people/${id}_img.jpg`} alt="Happy person" className={'img ' + (fading ? 'fading' : '')} />
+            <div className='imgContainer'>
+                <img src={`./images/people/${id}_img.jpg`} alt="Happy person" className={'img ' + (fading ? 'fading' : '')} />
+            </div>
         </div>
     )
 }
