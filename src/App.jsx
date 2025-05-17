@@ -36,7 +36,7 @@ function App() {
 			<Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
 			<Routes>
                 <Route path="/" element={<Navigate to="/home" />}/>
-				<Route path='/home' element={<Home/>}/>
+				<Route path='/home' element={<Home setActiveNav={setActiveNav} />}/>
 				<Route path='/classes' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
 				<Route path='/aboutUs' element={<AboutUs/>}/>

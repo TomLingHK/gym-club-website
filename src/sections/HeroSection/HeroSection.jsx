@@ -1,10 +1,13 @@
 import './HeroSection.scss';
 import { useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from 'react-router-dom';
 import OrientationContext from '../../store/orientationContext';
 
-function HeroSection() {
+function HeroSection({ setActiveNav }) {
     const orientation = useContext(OrientationContext);
+    const navigate = useNavigate();
+
     const { ref, inView } = useInView({
         threshold: 0.28,
     });
@@ -14,6 +17,13 @@ function HeroSection() {
         if (inView) video.play();
         else video.pause();
     }, [inView])
+
+    function onExploreClick() {
+        let _target = 'classes';
+        
+        navigate(`/${_target}`);
+        setActiveNav(_target);
+    }
 
     return (
         <section ref={ref} className={`heroSection scroll-checkpoint ${orientation} ` + (inView ? 'active' : '')}>
@@ -30,7 +40,7 @@ function HeroSection() {
                 <div className='description'>
                     Try our free trial section from one of our 100+ classes
                 </div>
-                <div className='btn exploreBtn'>
+                <div className='btn exploreBtn' onClick={onExploreClick}>
                     Explore
                 </div>
             </div>

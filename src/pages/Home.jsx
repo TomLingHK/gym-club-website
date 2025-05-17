@@ -5,10 +5,10 @@ import FeedbackSection from '../sections/FeedbackSection/FeedbackSection';
 import HeroSection from '../sections/HeroSection/HeroSection';
 import PricingSection from '../sections/PricingSection/PricingSection';
 
-function Home() {
+function Home({ setActiveNav }) {
     return (
         <>
-            <HeroSection/>
+            <HeroSection setActiveNav={setActiveNav} />
             <FeaturesSection/>
             <PricingSection/>
             <FeedbackSection/>
