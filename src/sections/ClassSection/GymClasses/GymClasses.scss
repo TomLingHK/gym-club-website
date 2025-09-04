@@ -1,0 +1,17 @@
+.gymClasses {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-style: italic;
+        color: var(--color-primary-light);
+        height: 6rem;
+        opacity: 0.8;
+    }
+
+    .classesPanel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

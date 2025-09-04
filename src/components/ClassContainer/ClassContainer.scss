@@ -3,6 +3,8 @@
     width: 29%;
     margin: 2%;
 
+    cursor: pointer;
+
     .img {
         position: relative;
         height: 80%;
@@ -18,5 +20,15 @@
 
     .text {
         text-align: center;
+    }
+
+    &:hover {
+        .img {
+            border: 2px solid var(--color-primary);
+        }
+
+        .text {
+            color: var(--color-primary);
+        }
     }
 }

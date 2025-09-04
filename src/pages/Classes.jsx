@@ -1,9 +1,12 @@
+import { useParams } from "react-router-dom";
 import ClassSection from "../sections/ClassSection/ClassSection";
 
 function Classes() {
+    const { classId } = useParams();
+
     return (
         <div>
-            <ClassSection/>
+            <ClassSection classId={classId}/>
         </div>
     )
 }

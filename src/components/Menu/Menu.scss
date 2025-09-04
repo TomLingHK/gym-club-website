@@ -7,5 +7,9 @@
     .item {
         cursor: pointer;
         width: max-content;
+
+        &.active {
+            color: var(--color-primary-light);
+        }
     }
 }

@@ -6,7 +6,7 @@ import PopularClasses from './PopularClasses/PopularClasses';
 import GymClasses from './GymClasses/GymClasses';
 import YogaClasses from './YogaClasses/YogaClasses';
 
-function ClassSection() {
+function ClassSection({ classId }) {
     const [activeMenu, setActiveMenu] = useState('popular');
     const menuData = {
         mainTitle: "Our Classes",
@@ -17,16 +17,28 @@ function ClassSection() {
         ]
     }
 
+    function getActiveContent() {
+        switch (activeMenu) {
+            case 'popular': return <PopularClasses/>;
+            case 'gym': return <GymClasses/>;
+            case 'yoga': return <YogaClasses/>;
+            default: return <PopularClasses/>;
+        }
+    }
+
     return (
         <div className='classSection'>
             <div className='img'>
             </div>
             <div className='classesContainer'>
-                <Menu menuData={menuData} setActiveMenu={setActiveMenu} />
+                <Menu menuData={menuData} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
                 <div className='content'>
-                    { activeMenu === 'popular' && <PopularClasses/> }
-                    { activeMenu === 'gym' && <GymClasses/> }
-                    { activeMenu === 'yoga' && <YogaClasses/> }
+                    { !!classId 
+                    ?
+                        classId
+                    :
+                        getActiveContent() 
+                    }
                 </div>
             </div>
         </div>

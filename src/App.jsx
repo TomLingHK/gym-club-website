@@ -38,6 +38,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/home" />}/>
 				<Route path='/home' element={<Home setActiveNav={setActiveNav} />}/>
 				<Route path='/classes' element={<Classes/>}/>
+                <Route path='/classes/:classId' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
 				<Route path='/aboutUs' element={<AboutUs/>}/>
 			</Routes>
