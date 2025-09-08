@@ -10,7 +10,7 @@ function ClassContainer({ title, fullTitle }) {
 
     return (
         <div className='classContainer' onClick={() => onClassClick(title)}>
-            <img className='img' src={`./images/${title}_img.jpg`} alt={`title ` + 'img'} />
+            <img className='img' src={`./images/class/${title}_img.jpg`} alt={`title ` + 'img'} />
             <div className='text'>{ fullTitle }</div>
         </div>
     );
