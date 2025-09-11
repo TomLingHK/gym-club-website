@@ -28,10 +28,6 @@ function YogaClasses() {
             title: 'yoga_wheel',
         },
         {
-            fullTitle: 'Wall Rope', 
-            title: 'wall_rope',
-        },
-        {
             fullTitle: 'Mat Pilates', 
             title: 'mat_pilates',
         },
