@@ -13,7 +13,7 @@ Unsplash
 Todo:
 - [x] Add images
 - [x] Grey scale, when hover become color
-- [ ] Flash when change category
+- [x] Flash when change category
 - [x] Use unique key for all classes as a json file
 - [ ] Home page add go to top button
 - [ ] Refactor class section into same component
