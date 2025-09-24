@@ -1,6 +1,7 @@
 import './TrainerSection.scss';
 import { useState } from 'react';
 
+// Components
 import Menu from '../../components/Menu/Menu';
 
 function TrainerSection() {

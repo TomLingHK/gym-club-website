@@ -1,3 +1,4 @@
+// Components
 import TrainerSection from "../sections/TrainerSection/TrainerSection";
 
 function Trainers() {

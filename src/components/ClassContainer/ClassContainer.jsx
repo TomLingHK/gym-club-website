@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import './ClassContainer.scss';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ClassContainer({ index, title, fullTitle }) {
     const navigate = useNavigate();

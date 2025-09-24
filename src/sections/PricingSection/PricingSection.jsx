@@ -1,8 +1,11 @@
 import './PricingSection.scss';
 import { useState, useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
+// Components
 import PlanContainer from '../../components/PlanContainer/PlanContainer';
 
 function PricingSection() {

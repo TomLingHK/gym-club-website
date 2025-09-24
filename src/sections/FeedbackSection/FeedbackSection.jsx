@@ -1,10 +1,13 @@
 import './FeedbackSection.scss';
 import { useState, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
-import OrientationContext from '../../store/orientationContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+// Context
+import OrientationContext from '../../store/orientationContext';
+
+// Components
 import FeedbackContainer from '../../components/FeedbackContainer/FeedbackContainer';
 import FeedbackThumbnail from '../../components/FeedbackThumbnail/FeedbackThumbnail';
 

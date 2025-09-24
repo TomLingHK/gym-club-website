@@ -1,8 +1,11 @@
 import './FeaturesSection.scss'
 import { useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
+// Components
 import FeatureContainer from '../../components/FeatureContainer/FeatureContainer';
 
 function FeaturesSection() {

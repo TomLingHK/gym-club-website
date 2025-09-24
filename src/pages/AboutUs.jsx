@@ -1,3 +1,4 @@
+// Components
 import AboutUsSection from "../sections/AboutUsSection/AboutUsSection";
 
 function AboutUs() {

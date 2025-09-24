@@ -1,6 +1,7 @@
 import './AboutUsSection.scss';
 import { useState } from 'react';
 
+// Components
 import Menu from '../../components/Menu/Menu';
 
 function AboutUsSection() {

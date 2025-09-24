@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+
+// Components
 import ClassSection from "../sections/ClassSection/ClassSection";
 
 function Classes() {

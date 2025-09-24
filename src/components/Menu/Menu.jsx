@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import './Menu.scss';
+import { useNavigate } from 'react-router-dom';
 
 function Menu({ menuData, activeMenu, setActiveMenu }) {
     const { mainTitle, menuItem } = menuData;
@@ -7,7 +7,7 @@ function Menu({ menuData, activeMenu, setActiveMenu }) {
     
     function onMenuClick($item) {
         setActiveMenu($item.key);
-        navigate('/classes');
+        // navigate('/classes');
     }
 
     return (
@@ -15,12 +15,11 @@ function Menu({ menuData, activeMenu, setActiveMenu }) {
             <h3 className='mainTitle'>
                 {mainTitle}
             </h3>
-            {menuItem.map(item => {
-            return(
+            {menuItem.map(item => 
                 <div className={`item ${item.key} ${activeMenu === item.key ? 'active' : ''}`} onClick={ () => onMenuClick(item) } key={item.key} >
                     {item.text}
                 </div>
-            )})}
+            )}
         </div>
     )
 }

@@ -2,6 +2,8 @@ import './HeroSection.scss';
 import { useEffect, useContext } from 'react';
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from 'react-router-dom';
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
 function HeroSection({ setActiveNav }) {

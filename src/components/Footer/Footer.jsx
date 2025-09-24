@@ -1,6 +1,8 @@
 import './Footer.scss';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
 function Footer({ setActiveNav }) {

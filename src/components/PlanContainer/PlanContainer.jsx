@@ -1,7 +1,9 @@
 import './PlanContainer.scss';
+import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
 function PlanContainer({ title, price, description, item, activePlan, setActivePlan }) {
@@ -24,16 +26,14 @@ function PlanContainer({ title, price, description, item, activePlan, setActiveP
                 {description}
             </div>
             <div className='details'>
-                {item.map( type => {
-                    return (
-                        <div className='item' key={type}>
-                            <FontAwesomeIcon icon={faCircleCheck} className='tickIcon' />
-                            <div className='text'>
-                                {type}
-                            </div>
+                {item.map( type => 
+                    <div className='item' key={type}>
+                        <FontAwesomeIcon icon={faCircleCheck} className='tickIcon' />
+                        <div className='text'>
+                            {type}
                         </div>
-                    )
-                })}
+                    </div>
+                )}
             </div>
             <div className='btn selectPlanBtn'>
                 { orientation=='landscape' ? 'Select plan' : 'Select' }

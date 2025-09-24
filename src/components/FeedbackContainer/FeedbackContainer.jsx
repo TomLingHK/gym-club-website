@@ -1,5 +1,7 @@
 import './FeedbackContainer.scss';
 import { useEffect, useState, useContext } from 'react';
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
 function FeedbackContainer({ highlightContent, content, person, id }) {

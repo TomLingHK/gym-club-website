@@ -1,6 +1,7 @@
 import './ClassSection.scss';
 import { useState } from 'react';
 
+// Components
 import Menu from '../../components/Menu/Menu';
 import PopularClasses from './PopularClasses/PopularClasses';
 import GymClasses from './GymClasses/GymClasses';

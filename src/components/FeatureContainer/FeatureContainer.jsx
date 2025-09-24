@@ -1,5 +1,7 @@
 import './FeatureContainer.scss'
 import { useContext } from 'react';
+
+// Context
 import OrientationContext from '../../store/orientationContext';
 
 function FeatureContainer({ id, title, description }) {
