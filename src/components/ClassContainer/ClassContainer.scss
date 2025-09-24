@@ -18,20 +18,25 @@
         border: 2px solid var(--color-white);
         filter: grayscale(100%);
         transition: all 0.5s ease;
+        transition-property: border, filter;
+        transition-duration: 1.5s; // slow by default
     }
 
     .text {
         text-align: center;
+        transition: color 1.5s;
     }
 
     &:hover {
         .img {
             border: 2px solid var(--color-primary);
             filter: grayscale(0%);
+            transition-duration: 0.2s; // fast on hover
         }
 
         .text {
             color: var(--color-primary);
+            transition-duration: 0.2s;
         }
     }
 }
