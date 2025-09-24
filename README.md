@@ -14,5 +14,6 @@ Todo:
 - [x] Add images
 - [x] Grey scale, when hover become color
 - [ ] Flash when change category
-- [ ] Use unique key for all classes as a json file
+- [x] Use unique key for all classes as a json file
 - [ ] Home page add go to top button
+- [ ] Refactor class section into same component

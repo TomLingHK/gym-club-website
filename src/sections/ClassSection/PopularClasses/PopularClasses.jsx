@@ -1,41 +1,34 @@
 import './PopularClasses.scss';
-import ClassContainer from '../../../components/ClassContainer/ClassContainer';
+
+// Components
+import ClassContainer from "../../../components/ClassContainer/ClassContainer";
+
+// Constants
+import class_info from "../../../constants/class_info.json";
 
 function PopularClasses() {
     const classesArr = [
-        {
-            fullTitle: 'Beginner gym programme', 
-            title: 'gym_beginner',
-        },
-        {
-            fullTitle: 'Badminton programme', 
-            title: 'badminton',
-        },
-        {
-            fullTitle: 'Triathlon', 
-            title: 'triathlon',
-        },
-        {
-            fullTitle: 'Dumbell programme', 
-            title: 'dumbell',
-        },
-        {
-            fullTitle: 'Personal Trainer',
-            title: 'personal_trainer',
-        },
+        "gym_beginner",
+        "badminton",
+        "triathlon",
+        "dumbell",
+        "personal_trainer",
     ];
 
     return (
         <div className='popuplarClasses'>
             <h2 className='title'>Most Popuplar Classes</h2>
             <div className='classesPanel'>
-                {classesArr.map(({title, fullTitle}, index) => 
-                    <ClassContainer 
-                        key={index} 
-                        title={title} 
-                        fullTitle={fullTitle}
-                    />
-                )}
+                {classesArr.map((title, index) => {
+                    const classDetails = class_info[title];
+                    return (
+                        <ClassContainer
+                            key={index}
+                            title={classDetails?.title}
+                            fullTitle={classDetails?.fullTitle}
+                        />
+                    );
+                })}
             </div>
         </div>
     )

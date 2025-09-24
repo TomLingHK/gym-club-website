@@ -1,0 +1,74 @@
+{
+    "advanced_weight_lifting": {
+        "fullTitle": "Advanced weight lifting",
+        "title": "advanced_weight_lifting"
+    },
+    "aerial_beginner": {
+        "fullTitle": "Aerial for beginners",
+        "title": "aerial_beginner"
+    },
+    "aerial_hoop": {
+        "fullTitle": "Aerial Hoop",
+        "title": "aerial_hoop"
+    },
+    "badminton": {
+        "fullTitle": "Badminton programme",
+        "title": "badminton"
+    },
+    "barbell": {
+        "fullTitle": "Barbell programme",
+        "title": "barbell"
+    },
+    "cardio": {
+        "fullTitle": "Cardio Programme",
+        "title": "cardio"
+    },
+    "core": {
+        "fullTitle": "Core Programme",
+        "title": "core"
+    },
+    "dumbell": {
+        "fullTitle": "Dumbell programme",
+        "title": "dumbell"
+    },
+    "full_body_workout": {
+        "fullTitle": "Full-body workout",
+        "title": "full_body_workout"
+    },
+    "gym_beginner": {
+        "fullTitle": "Beginner gym programme",
+        "title": "gym_beginner"
+    },
+    "mat_pilates": {
+        "fullTitle": "Mat Pilates",
+        "title": "mat_pilates"
+    },
+    "personal_trainer": {
+        "fullTitle": "Personal Trainer",
+        "title": "personal_trainer"
+    },
+    "pilates": {
+        "fullTitle": "Pilates",
+        "title": "pilates"
+    },
+    "spinning": {
+        "fullTitle": "Spinning Classes",
+        "title": "spinning"
+    },
+    "triathlon": {
+        "fullTitle": "Triathlon",
+        "title": "triathlon"
+    },
+    "yoga_beginner": {
+        "fullTitle": "Yoga for beginners",
+        "title": "yoga_beginner"
+    },
+    "yoga_therapy": {
+        "fullTitle": "Yoga Therapy",
+        "title": "yoga_therapy"
+    },
+    "yoga_wheel": {
+        "fullTitle": "Yoga Wheel",
+        "title": "yoga_wheel"
+    }
+}
