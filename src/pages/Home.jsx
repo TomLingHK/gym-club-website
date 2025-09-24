@@ -1,4 +1,5 @@
 // Components
+import GoToTopBtn from '../components/GoToTopBtn/GoToTopBtn';
 import EmptySection from '../sections/EmptySection/EmptySection';
 import FeaturesSection from '../sections/FeaturesSection/FeaturesSection';
 import FeedbackSection from '../sections/FeedbackSection/FeedbackSection';
@@ -13,6 +14,7 @@ function Home({ setActiveNav }) {
             <PricingSection/>
             <FeedbackSection/>
             <EmptySection/>
+            <GoToTopBtn/>
         </>
     )
 }
