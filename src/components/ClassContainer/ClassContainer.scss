@@ -2,6 +2,9 @@
     height: 20vh;
     width: 29%;
     margin: 2%;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
 
     cursor: pointer;
 
@@ -16,7 +19,7 @@
         background-position: center;
         background-size: cover;
         border: 2px solid var(--color-white);
-        filter: grayscale(100%);
+        filter: grayscale(0%);
         transition: all 0.5s ease;
         transition-property: border, filter;
         transition-duration: 1.5s; // slow by default
@@ -25,6 +28,15 @@
     .text {
         text-align: center;
         transition: color 1.5s;
+    }
+
+    &.fadeIn {
+        transform: translateY(0px);
+        opacity: 1;
+
+        .img {
+            filter: grayscale(100%);
+        }
     }
 
     &:hover {

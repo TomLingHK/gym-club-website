@@ -24,6 +24,7 @@ function PopularClasses() {
                     return (
                         <ClassContainer
                             key={index}
+                            index={index}
                             title={classDetails?.title}
                             fullTitle={classDetails?.fullTitle}
                         />
