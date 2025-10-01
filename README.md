@@ -18,3 +18,5 @@ Todo:
 - [x] Home page add go to top button
 - [x] Refactor class section into same component
 - [ ] Trainer section
+- [ ] Pricing responsive, too crowded
+- [ ] Footer able to change section

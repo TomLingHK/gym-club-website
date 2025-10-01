@@ -13,9 +13,15 @@ function Footer({ setActiveNav }) {
         let _target = '';
 
         switch ($item) {
-            case "aboutUs": _target = 'aboutUs'; break;
-            case "popularClasses": _target = 'classes'; break;
-            case "ambassador": _target = 'trainers'; break;
+            case "aboutUs": 
+                _target = 'aboutUs'; break;
+            case "popularClasses": 
+            case "gymClasses":
+            case "yogaClasses": 
+                _target = 'classes'; break;
+            case "ambassador":
+            case "trainers":
+                _target = 'trainers'; break;
             default: console.warn('Navigation mapping error, item: ', $item);
         }
 
@@ -53,10 +59,10 @@ function Footer({ setActiveNav }) {
                     <div className='page popularClasses' onClick={() => onPageClick('popularClasses')} >
                         Most Popular
                     </div>
-                    <div className='page'>
+                    <div className='page gymClasses' onClick={() => onPageClick('gymClasses')} >
                         Gym
                     </div>
-                    <div className='page'>
+                    <div className='page yogaClasses' onClick={() => onPageClick('yogaClasses')} >
                         Yoga
                     </div>
                 </div>
@@ -67,7 +73,7 @@ function Footer({ setActiveNav }) {
                     <div className='page ambassador' onClick={() => onPageClick('ambassador')} >
                         Brand Ambassador
                     </div>
-                    <div className='page'>
+                    <div className='page trainers' onClick={() => onPageClick('trainers')} >
                         All Trainers
                     </div>
                 </div>
