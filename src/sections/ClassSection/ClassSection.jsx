@@ -6,6 +6,7 @@ import Menu from '../../components/Menu/Menu';
 import PopularClasses from './PopularClasses/PopularClasses';
 import GymClasses from './GymClasses/GymClasses';
 import YogaClasses from './YogaClasses/YogaClasses';
+import ClassCategory from './ClassCategory/ClassCategory';
 
 function ClassSection({ classId }) {
     const [activeMenu, setActiveMenu] = useState('popular');
@@ -18,11 +19,51 @@ function ClassSection({ classId }) {
         ]
     }
 
+    const classCategoryObj = {
+        "popular": {
+            "title": "Most Popuplar Classes",
+            "classesArr": [
+                "gym_beginner",
+                "badminton",
+                "triathlon",
+                "dumbell",
+                "personal_trainer",
+            ]
+        },
+        "gym": {
+            "title": "Gym Classes",
+            "classesArr": [
+                "gym_beginner",
+                "barbell",
+                "dumbell",
+                "advanced_weight_lifting",
+                "spinning",
+                "personal_trainer",
+                "cardio",
+                "full_body_workout",
+                "core",
+            ]
+        },
+        "yoga": {
+            "title": "Yoga Classes",
+            "classesArr": [
+                "yoga_beginner",
+                "aerial_beginner",
+                "aerial_hoop",
+                "pilates",
+                "yoga_therapy",
+                "yoga_wheel",
+                "mat_pilates",
+            ]
+        },
+    }
+
     function getActiveContent() {
         switch (activeMenu) {
-            case 'popular': return <PopularClasses/>;
-            case 'gym': return <GymClasses/>;
-            case 'yoga': return <YogaClasses/>;
+            case 'popular':
+            case 'gym':
+            case 'yoga':
+                return <ClassCategory categoryTitle={classCategoryObj[activeMenu]?.title} classesArr={classCategoryObj[activeMenu]?.classesArr} />
             default: return <PopularClasses/>;
         }
     }

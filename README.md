@@ -16,5 +16,5 @@ Todo:
 - [x] Flash when change category
 - [x] Use unique key for all classes as a json file
 - [x] Home page add go to top button
-- [ ] Refactor class section into same component
+- [x] Refactor class section into same component
 - [ ] Trainer section
