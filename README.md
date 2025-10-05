@@ -19,4 +19,4 @@ Todo:
 - [x] Refactor class section into same component
 - [ ] Trainer section
 - [ ] Pricing responsive, too crowded
-- [ ] Footer able to change section
+- [x] Footer able to change section

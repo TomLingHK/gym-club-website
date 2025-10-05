@@ -5,8 +5,8 @@ import { useState } from 'react';
 import Menu from '../../components/Menu/Menu';
 import ClassCategory from './ClassCategory/ClassCategory';
 
-function ClassSection({ classId }) {
-    const [activeMenu, setActiveMenu] = useState('popular');
+function ClassSection({ classId, defaultMenu = 'popular' }) {
+    const [activeMenu, setActiveMenu] = useState(defaultMenu);
     const menuData = {
         mainTitle: "Our Classes",
         menuItem: [

@@ -9,25 +9,19 @@ function Footer({ setActiveNav }) {
     const orientation = useContext(OrientationContext);
     const navigate = useNavigate();
 
-    function onPageClick($item) {
-        let _target = '';
-
-        switch ($item) {
+    function onPageClick($page, $activeMenu = '' ) {
+        switch ($page) {
             case "aboutUs": 
-                _target = 'aboutUs'; break;
-            case "popularClasses": 
-            case "gymClasses":
-            case "yogaClasses": 
-                _target = 'classes'; break;
-            case "ambassador":
+            case "classes":
             case "trainers":
-                _target = 'trainers'; break;
-            default: console.warn('Navigation mapping error, item: ', $item);
+                break;
+            default: 
+                console.warn('Navigation mapping error, page: ', $page); return;
         }
 
-        if (_target !== '') {
-            navigate(`/${_target}`);
-            setActiveNav(_target);
+        if ($page !== '') {
+            $activeMenu !== '' ? navigate(`/${$page}`, { state: { activeMenu: $activeMenu } }) : navigate(`/${$page}`);
+            setActiveNav($page);
             window.scrollTo(0, 0);
         }
     }
@@ -45,10 +39,10 @@ function Footer({ setActiveNav }) {
                     <h3 className='category'>
                         HKGC
                     </h3>
-                    <div className='page aboutUs' onClick={() => onPageClick('aboutUs')} >
+                    <div className='page aboutUs' onClick={() => onPageClick('aboutUs', 'aboutUs')} >
                         About Us
                     </div>
-                    <div className='page'>
+                    <div className='page' onClick={() => onPageClick('aboutUs', 'contactUs')} >
                         Contact Us
                     </div>
                 </div>
@@ -56,13 +50,13 @@ function Footer({ setActiveNav }) {
                     <h3 className='category'>
                         Our Classes
                     </h3>
-                    <div className='page popularClasses' onClick={() => onPageClick('popularClasses')} >
+                    <div className='page popular' onClick={() => onPageClick('classes', 'popular')} >
                         Most Popular
                     </div>
-                    <div className='page gymClasses' onClick={() => onPageClick('gymClasses')} >
+                    <div className='page gym' onClick={() => onPageClick('classes', 'gym')} >
                         Gym
                     </div>
-                    <div className='page yogaClasses' onClick={() => onPageClick('yogaClasses')} >
+                    <div className='page yoga' onClick={() => onPageClick('classes', 'yoga')} >
                         Yoga
                     </div>
                 </div>
@@ -70,10 +64,10 @@ function Footer({ setActiveNav }) {
                     <h3 className='category'>
                         Our Trainers
                     </h3>
-                    <div className='page ambassador' onClick={() => onPageClick('ambassador')} >
+                    <div className='page ambassador' onClick={() => onPageClick('trainers', 'ambassador')} >
                         Brand Ambassador
                     </div>
-                    <div className='page trainers' onClick={() => onPageClick('trainers')} >
+                    <div className='page trainers' onClick={() => onPageClick('trainers', 'trainers')} >
                         All Trainers
                     </div>
                 </div>

@@ -4,8 +4,8 @@ import { useState } from 'react';
 // Components
 import Menu from '../../components/Menu/Menu';
 
-function AboutUsSection() {
-    const [activeMenu, setActiveMenu] = useState('aboutUs');
+function AboutUsSection({ defaultMenu = 'aboutUs' }) {
+    const [activeMenu, setActiveMenu] = useState(defaultMenu);
     const menuData = {
         mainTitle: "HKGC",
         menuItem: [

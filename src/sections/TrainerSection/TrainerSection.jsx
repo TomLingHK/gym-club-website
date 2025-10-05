@@ -4,8 +4,8 @@ import { useState } from 'react';
 // Components
 import Menu from '../../components/Menu/Menu';
 
-function TrainerSection() {
-    const [activeMenu, setActiveMenu] = useState('ambassador');
+function TrainerSection({ defaultMenu = 'ambassador' }) {
+    const [activeMenu, setActiveMenu] = useState(defaultMenu);
     const menuData = {
         mainTitle: "Our Classes",
         menuItem: [
