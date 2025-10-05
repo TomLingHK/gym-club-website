@@ -3,9 +3,6 @@ import { useState } from 'react';
 
 // Components
 import Menu from '../../components/Menu/Menu';
-import PopularClasses from './PopularClasses/PopularClasses';
-import GymClasses from './GymClasses/GymClasses';
-import YogaClasses from './YogaClasses/YogaClasses';
 import ClassCategory from './ClassCategory/ClassCategory';
 
 function ClassSection({ classId }) {
@@ -64,7 +61,7 @@ function ClassSection({ classId }) {
             case 'gym':
             case 'yoga':
                 return <ClassCategory categoryTitle={classCategoryObj[activeMenu]?.title} classesArr={classCategoryObj[activeMenu]?.classesArr} />
-            default: return <PopularClasses/>;
+            // default: return <PopularClasses/>;
         }
     }
 
