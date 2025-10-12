@@ -1,13 +1,14 @@
 // Components
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import TrainerSection from "../sections/TrainerSection/TrainerSection";
 
 function Trainers() {
+    const { trainerId } = useParams();
     const { state } = useLocation();
 
     return (
         <div>
-            <TrainerSection defaultMenu={state?.activeMenu} />
+            <TrainerSection trainerId={trainerId} defaultMenu={state?.activeMenu} />
         </div>
     )
 }

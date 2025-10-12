@@ -1,0 +1,48 @@
+.trainerContainer {
+    height: 40vh;
+    width: 46%;
+    margin: 0 2%;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    .img {
+        position: relative;
+        height: 80%;
+        min-height: 80%;
+        width: 100%;
+        min-width: 100%;
+        border-radius: var(--size-m);
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        border: 2px solid var(--color-white);
+        filter: grayscale(0%);
+        transition: all 0.5s ease;
+        transition-property: border, filter;
+        transition-duration: 1.5s; // slow by default
+    }
+
+    .text {
+        text-align: center;
+        transition: color 1.5s;
+    }
+
+    &.fadeIn {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    &:hover {
+        .img {
+            border: 2px solid var(--color-primary);
+            transition-duration: 0.2s; // fast on hover
+        }
+
+        .text {
+            color: var(--color-primary);
+            transition-duration: 0.2s;
+        }
+    }
+}

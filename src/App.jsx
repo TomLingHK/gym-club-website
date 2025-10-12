@@ -40,6 +40,7 @@ function App() {
 				<Route path='/classes' element={<Classes/>}/>
                 <Route path='/classes/:classId' element={<Classes/>}/>
 				<Route path='/trainers' element={<Trainers/>}/>
+                <Route path='/trainers/:trainerId' element={<Trainers/>}/>
 				<Route path='/aboutUs' element={<AboutUs/>}/>
 			</Routes>
             <Footer setActiveNav={setActiveNav} />

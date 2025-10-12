@@ -17,6 +17,10 @@ Todo:
 - [x] Use unique key for all classes as a json file
 - [x] Home page add go to top button
 - [x] Refactor class section into same component
-- [ ] Trainer section
+- [x] Trainer section
+- [ ] Trainer details
+- [ ] Class details
 - [ ] Pricing responsive, too crowded
 - [x] Footer able to change section
+- [ ] Bug: click class / trainer details. Then click side category. Does not change to category page
+- [ ] Bug: click footer. Does not update active menu and active content.
